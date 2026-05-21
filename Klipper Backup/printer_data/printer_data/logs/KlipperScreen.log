@@ -1,0 +1,1777 @@
+2026-05-18 19:24:44,145 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 19:24:44,146 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 19:24:44,146 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 19:28:45,338 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 19:28:45,340 [config.py:__init__()] - Config path location: /home/pi/KlipperScreen/config/defaults.conf
+2026-05-18 19:28:45,442 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 19:28:45,624 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 19:28:45,625 [config.py:install_language()] - Using lang en
+2026-05-18 19:28:45,650 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 19:28:45,653 [screen.py:__init__()] - Screen 0: 800x480
+2026-05-18 19:28:45,653 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 19:28:45,654 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 19:28:45,658 [screen.py:__init__()] - Screen resolution: 800x480
+2026-05-18 19:28:45,971 [KlippyGtk.py:__init__()] - Font size: 17.8 (medium)
+2026-05-18 19:28:46,510 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:28:49,175 [config.py:save_user_config_options()] - Creating a new config file in /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 19:28:49,203 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:28:49,203 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:28:49,204 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 19:28:49,204 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:28:49,305 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 19:28:49,382 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 19:28:49,403 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 19:28:49,500 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 19:28:49,519 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:28:49,520 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:28:54,105 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 19:28:54,105 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 19:28:54,106 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 19:28:54,122 [_logging.py:info()] - Websocket connected
+2026-05-18 19:28:54,123 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 19:28:54,131 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 19:28:54,178 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 19:28:54,206 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 19:28:54,208 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 19:28:54,392 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 19:28:54,393 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 19:28:54,393 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 19:28:54,393 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 19:28:54,393 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 19:28:54,393 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 19:28:54,394 [printer.py:log_counts()] - # Leds: 0
+2026-05-18 19:28:54,668 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 19:28:54,669 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 19:28:54,671 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 19:28:54,673 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 19:28:54,674 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 19:28:54,707 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:28:54,708 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:28:54,708 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 19:28:54,711 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:28:54,809 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 19:28:55,036 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 19:28:55,048 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 19:28:55,059 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 19:28:55,069 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 19:28:55,107 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 19:28:55,117 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:28:55,150 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 19:28:55,179 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 19:28:58,704 [screen.py:_go_to_submenu()] - #### Go to submenu more
+2026-05-18 19:28:58,704 [screen.py:_go_to_submenu()] - #### Menu __main
+2026-05-18 19:28:58,712 [screen.py:_load_panel()] - Loading panel: menu
+2026-05-18 19:28:58,780 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 19:28:59,052 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2026-05-18 19:28:59,060 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2026-05-18 19:28:59,064 [menu.py:arrangeMenuItems()] - X > more bedmesh
+2026-05-18 19:28:59,079 [menu.py:arrangeMenuItems()] - X > more led
+2026-05-18 19:28:59,092 [menu.py:arrangeMenuItems()] - X > more pins
+2026-05-18 19:28:59,097 [menu.py:arrangeMenuItems()] - X > more power
+2026-05-18 19:28:59,102 [menu.py:arrangeMenuItems()] - X > more camera
+2026-05-18 19:28:59,112 [menu.py:arrangeMenuItems()] - X > more input_shaper
+2026-05-18 19:28:59,126 [menu.py:arrangeMenuItems()] - X > more spoolman
+2026-05-18 19:28:59,126 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 19:28:59,161 [screen.py:_go_to_submenu()] - menu, {{ gettext('More') }}, panel_name=more, items=[{'more bedlevel': {'name': "{{ gettext('Bed Level') }}", 'icon': 'bed-level', 'panel': 'bed_level', 'method': None, 'confirm': None, 'enable': "{{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more bedmesh': {'name': "{{ gettext('Bed Mesh') }}", 'icon': 'bed-mesh', 'panel': 'bed_mesh', 'method': None, 'confirm': None, 'enable': "{{ 'bed_mesh' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more zoffset': {'name': "{{ gettext('Z Calibrate') }}", 'icon': 'z-farther', 'panel': 'zcalibrate', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more limits': {'name': "{{ gettext('Limits') }}", 'icon': 'fine-tune', 'panel': 'limits', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more fan': {'name': "{{ gettext('Fan') }}", 'icon': 'fan', 'panel': 'fan', 'method': None, 'confirm': None, 'enable': '{{ printer.fans.count > 0 }}', 'params': '{}', 'style': None}}, {'more led': {'name': "{{ gettext('Leds') }}", 'icon': 'light', 'panel': 'led', 'method': None, 'confirm': None, 'enable': '{{ printer.leds.count > 0 }}', 'params': '{}', 'style': None}}, {'more macros': {'name': "{{ gettext('Macros') }}", 'icon': 'custom-script', 'panel': 'gcode_macros', 'method': None, 'confirm': None, 'enable': '{{ printer.gcode_macros.count > 0 }}', 'params': '{}', 'style': None}}, {'more pins': {'name': "{{ gettext('Pins') }}", 'icon': 'hashtag', 'panel': 'pins', 'method': None, 'confirm': None, 'enable': '{{ printer.output_pins.count > 0 or printer.pwm_tools.count > 0 }}', 'params': '{}', 'style': None}}, {'more power': {'name': "{{ gettext('Power') }}", 'icon': 'shutdown', 'panel': 'power', 'method': None, 'confirm': None, 'enable': '{{ moonraker.power_devices.count > 0 }}', 'params': '{}', 'style': None}}, {'more camera': {'name': "{{ gettext('Camera') }}", 'icon': 'camera', 'panel': 'camera', 'method': None, 'confirm': None, 'enable': '{{ moonraker.cameras.count > 0 }}', 'params': '{}', 'style': None}}, {'more console': {'name': "{{ gettext('Console') }}", 'icon': 'console', 'panel': 'console', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more updater': {'name': "{{ gettext('Update') }}", 'icon': 'refresh', 'panel': 'updater', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more input_shaper': {'name': "{{ gettext('Input Shaper') }}", 'icon': 'move', 'panel': 'input_shaper', 'method': None, 'confirm': None, 'enable': "{{ 'input_shaper' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more save': {'name': "{{ gettext('Save Config') }}", 'icon': 'complete', 'panel': None, 'method': 'ks_confirm_save', 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more settings': {'name': 'KlipperScreen', 'icon': 'settings', 'panel': 'settings', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more network': {'name': "{{ gettext('Network') }}", 'icon': 'network', 'panel': 'network', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more notifications': {'name': "{{ gettext('Notifications') }}", 'icon': 'notifications', 'panel': 'notifications', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more spoolman': {'name': 'Spoolman', 'icon': 'spoolman', 'panel': 'spoolman', 'method': None, 'confirm': None, 'enable': '{{ moonraker.spoolman }}', 'params': '{}', 'style': None}}, {'more system': {'name': "{{ gettext('System') }}", 'icon': 'info', 'panel': 'system', 'method': None, 'confirm': None, 'enable': '{{ moonraker_connected }}', 'params': '{}', 'style': None}}, {'more fine_tune': {'name': "{{ gettext('Fine Tuning') }}", 'icon': 'fine-tune', 'panel': 'fine_tune', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}]
+2026-05-18 19:29:00,264 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 19:29:00,297 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:29:49,102 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:31:03,679 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 19:31:03,679 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 19:31:03,680 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 19:31:03,878 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 19:31:03,879 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 19:31:03,974 [config.py:log_config()] - ===== Config File =====
+
+=======================
+2026-05-18 19:31:03,976 [config.py:__init__()] - 
+====== Saved ======
+
+
+
+
+2026-05-18 19:31:03,977 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 19:31:04,146 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 19:31:04,146 [config.py:install_language()] - Using lang en
+2026-05-18 19:31:04,165 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 19:31:04,167 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 19:31:04,168 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 19:31:04,168 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 19:31:04,171 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 19:31:04,474 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 19:31:04,638 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:31:04,746 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:31:04,747 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:31:04,748 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 19:31:04,748 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:31:04,847 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 19:31:04,913 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 19:31:04,935 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 19:31:05,033 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 19:31:05,053 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:31:05,053 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:31:09,105 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 19:31:09,105 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 19:31:09,106 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 19:31:09,118 [_logging.py:info()] - Websocket connected
+2026-05-18 19:31:09,119 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 19:31:09,127 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 19:31:09,172 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 19:31:09,202 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 19:31:09,204 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 19:31:09,325 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 19:31:09,325 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 19:31:09,325 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 19:31:09,326 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 19:31:09,326 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 19:31:09,326 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 19:31:09,326 [printer.py:log_counts()] - # Leds: 0
+2026-05-18 19:31:09,596 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 19:31:09,597 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 19:31:09,600 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 19:31:09,602 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 19:31:09,602 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 19:31:09,640 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:31:09,640 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:31:09,641 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 19:31:09,643 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:31:09,744 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 19:31:09,916 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 19:31:09,928 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 19:31:09,938 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 19:31:09,948 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 19:31:09,984 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 19:31:09,994 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:31:10,024 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 19:31:10,049 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 19:32:05,103 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:32:19,280 [main_menu.py:toggle_visibility()] - Graph show False: extruder1
+2026-05-18 19:32:57,152 [main_menu.py:toggle_visibility()] - Graph show True: extruder1
+2026-05-18 19:32:57,920 [main_menu.py:toggle_visibility()] - Graph show False: extruder1
+2026-05-18 19:32:58,496 [main_menu.py:toggle_visibility()] - Graph show True: extruder1
+2026-05-18 19:32:58,976 [main_menu.py:toggle_visibility()] - Graph show False: extruder1
+2026-05-18 19:33:34,833 [screen.py:show_popup_message()] - error: Invalid temperature
+2026-05-18 19:36:57,226 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 19:36:57,226 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 19:36:57,226 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 19:36:57,712 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 19:36:57,713 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 19:36:57,832 [config.py:log_config()] - ===== Config File =====
+
+=======================
+2026-05-18 19:36:57,835 [config.py:__init__()] - 
+====== Saved ======
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-18 19:36:57,835 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 19:36:58,089 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 19:36:58,090 [config.py:install_language()] - Using lang en
+2026-05-18 19:36:58,115 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 19:36:58,118 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 19:36:58,118 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 19:36:58,119 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 19:36:58,121 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 19:36:58,424 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 19:36:58,940 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:36:59,147 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:36:59,148 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:36:59,149 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 19:36:59,149 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:36:59,248 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 19:36:59,332 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 19:36:59,354 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 19:36:59,452 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 19:36:59,472 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:36:59,473 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:37:03,801 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 19:37:03,802 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 19:37:03,802 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 19:37:03,817 [_logging.py:info()] - Websocket connected
+2026-05-18 19:37:03,818 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 19:37:03,826 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 19:37:03,875 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 19:37:03,906 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 19:37:03,907 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 19:37:04,256 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 19:37:04,257 [printer.py:log_counts()] - # Leds: 0
+2026-05-18 19:37:04,532 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 19:37:04,532 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 19:37:04,536 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 19:37:04,538 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 19:37:04,538 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 19:37:04,571 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:37:04,572 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:37:04,572 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 19:37:04,575 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:37:04,673 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 19:37:04,891 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 19:37:04,903 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 19:37:04,918 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 19:37:04,933 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 19:37:04,974 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 19:37:04,985 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:05,016 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 19:37:05,042 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 19:37:06,330 [screen.py:_load_panel()] - Loading panel: gcodes
+2026-05-18 19:37:06,429 [gcodes.py:__init__()] - Thumbsize: 118.3
+2026-05-18 19:37:06,432 [gcodes.py:__init__()] - thumbs
+2026-05-18 19:37:06,443 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-18 19:37:06,456 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-18 19:37:07,381 [gcodes.py:load_files()] - Loaded in 0.194 seconds
+2026-05-18 19:37:09,908 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 19:37:09,941 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:11,326 [screen.py:_load_panel()] - Loading panel: shutdown
+2026-05-18 19:37:11,387 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > shutdown
+2026-05-18 19:37:15,261 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 19:37:15,310 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:18,527 [screen.py:_load_panel()] - Loading panel: extrude
+2026-05-18 19:37:18,657 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > extrude
+2026-05-18 19:37:19,652 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 19:37:19,684 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:23,156 [main_menu.py:verify_max_temp()] - 60/310
+2026-05-18 19:37:23,156 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S60
+2026-05-18 19:37:29,565 [main_menu.py:verify_max_temp()] - 0/310
+2026-05-18 19:37:29,566 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S0
+2026-05-18 19:37:34,607 [screen.py:_load_panel()] - Loading panel: move
+2026-05-18 19:37:34,782 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move
+2026-05-18 19:37:37,104 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-18 19:37:37,132 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:37,806 [screen.py:_load_panel()] - Loading panel: temperature
+2026-05-18 19:37:37,875 [temperature.py:add_device()] - Adding device: extruder
+2026-05-18 19:37:37,883 [temperature.py:add_device()] - Adding device: extruder1
+2026-05-18 19:37:37,889 [temperature.py:add_device()] - Adding device: heater_bed
+2026-05-18 19:37:37,937 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2026-05-18 19:37:37,940 [temperature.py:select_heater()] - Selecting extruder
+2026-05-18 19:37:37,941 [temperature.py:select_heater()] - Selecting extruder1
+2026-05-18 19:37:37,941 [temperature.py:select_heater()] - Selecting heater_bed
+2026-05-18 19:37:40,357 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-18 19:37:40,404 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:42,388 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > extrude
+2026-05-18 19:37:44,841 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 19:37:44,870 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 19:37:53,739 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > shutdown
+2026-05-18 19:37:55,123 [KlippyGtk.py:Dialog()] - Showing dialog Shutdown (width=480, height=800)
+2026-05-18 19:37:57,063 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2026-05-18 19:37:58,605 [KlippyGtk.py:Dialog()] - Showing dialog Shutdown (width=480, height=800)
+2026-05-18 19:37:59,223 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2026-05-18 19:38:47,605 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 19:38:47,606 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 19:38:47,606 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 19:38:48,113 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 19:38:48,113 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 19:38:48,228 [config.py:log_config()] - ===== Config File =====
+
+=======================
+2026-05-18 19:38:48,231 [config.py:__init__()] - 
+====== Saved ======
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-18 19:38:48,232 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 19:38:48,488 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 19:38:48,488 [config.py:install_language()] - Using lang en
+2026-05-18 19:38:48,515 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 19:38:48,517 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 19:38:48,517 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 19:38:48,517 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 19:38:48,520 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 19:38:48,822 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 19:38:49,336 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 19:38:49,543 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:38:49,543 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 19:38:49,544 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 19:38:49,544 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 19:38:49,643 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 19:38:49,728 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 19:38:49,750 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 19:38:49,847 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 19:38:49,866 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 19:38:49,867 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:23:03,171 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 20:23:03,171 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 20:23:03,172 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 20:23:03,184 [_logging.py:info()] - Websocket connected
+2026-05-18 20:23:03,185 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 20:23:03,194 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 20:23:03,241 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 20:23:03,270 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:23:03,272 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 20:23:03,597 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:23:03,598 [printer.py:log_counts()] - # Leds: 0
+2026-05-18 20:23:03,870 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:23:03,870 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:23:03,873 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:23:03,876 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:23:03,876 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:23:03,913 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:23:03,913 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:23:03,914 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:23:03,916 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:23:04,019 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 20:23:04,225 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:23:04,236 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:23:04,251 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:23:04,266 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:23:04,310 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:23:04,320 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:23:04,351 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:23:04,377 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:23:59,169 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:27:23,298 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 20:27:23,298 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 20:27:23,299 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 20:27:23,801 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 20:27:23,801 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 20:27:23,917 [config.py:log_config()] - ===== Config File =====
+
+=======================
+2026-05-18 20:27:23,919 [config.py:__init__()] - 
+====== Saved ======
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-18 20:27:23,920 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 20:27:24,175 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 20:27:24,175 [config.py:install_language()] - Using lang en
+2026-05-18 20:27:24,202 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 20:27:24,204 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 20:27:24,204 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 20:27:24,204 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 20:27:24,207 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 20:27:24,512 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 20:27:25,028 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:27:25,240 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:27:25,241 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:27:25,242 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 20:27:25,242 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:27:25,341 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 20:27:25,425 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:27:25,447 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 20:27:25,545 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 20:27:25,564 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:27:25,565 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:27:30,154 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 20:27:30,155 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 20:27:30,155 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 20:27:30,171 [_logging.py:info()] - Websocket connected
+2026-05-18 20:27:30,172 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 20:27:30,180 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 20:27:30,234 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 20:27:30,266 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:27:30,268 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 20:27:30,452 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:27:30,452 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:27:30,452 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:27:30,453 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:27:30,453 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:27:30,453 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:27:30,453 [printer.py:log_counts()] - # Leds: 0
+2026-05-18 20:27:30,727 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:27:30,728 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:27:30,731 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:27:30,733 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:27:30,734 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:27:30,768 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:27:30,769 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:27:30,769 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:27:30,771 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:27:30,881 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 20:27:31,087 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:27:31,098 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:27:31,114 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:27:31,128 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:27:31,169 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:27:31,180 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:27:31,212 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:27:31,238 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:27:44,252 [screen.py:_load_panel()] - Loading panel: gcodes
+2026-05-18 20:27:44,302 [gcodes.py:__init__()] - Thumbsize: 118.3
+2026-05-18 20:27:44,305 [gcodes.py:__init__()] - thumbs
+2026-05-18 20:27:44,317 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-18 20:27:44,330 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-18 20:27:45,256 [gcodes.py:load_files()] - Loaded in 0.197 seconds
+2026-05-18 20:27:46,314 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-18 20:27:46,366 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:27:54,941 [screen.py:_load_panel()] - Loading panel: temperature
+2026-05-18 20:27:54,984 [temperature.py:add_device()] - Adding device: extruder
+2026-05-18 20:27:54,996 [temperature.py:add_device()] - Adding device: extruder1
+2026-05-18 20:27:55,005 [temperature.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:27:55,079 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2026-05-18 20:27:55,081 [temperature.py:select_heater()] - Selecting extruder
+2026-05-18 20:27:55,081 [temperature.py:select_heater()] - Selecting extruder1
+2026-05-18 20:27:55,082 [temperature.py:select_heater()] - Selecting heater_bed
+2026-05-18 20:27:56,425 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 20:27:56,457 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:27:57,315 [screen.py:_load_panel()] - Loading panel: move
+2026-05-18 20:27:57,465 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move
+2026-05-18 20:28:00,129 [screen.py:_load_panel()] - Loading panel: menu
+2026-05-18 20:28:00,295 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move > menu
+2026-05-18 20:28:00,312 [menu.py:arrangeMenuItems()] - X > homing quad_gantry_level
+2026-05-18 20:28:00,317 [menu.py:arrangeMenuItems()] - X > homing Z-Tilt
+2026-05-18 20:28:02,569 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G28'}
+2026-05-18 20:28:07,306 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-18 20:28:07,349 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move
+2026-05-18 20:28:08,499 [KlippyGtk.py:Dialog()] - Showing dialog KlipperScreen (width=480, height=800)
+2026-05-18 20:28:11,585 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2026-05-18 20:28:11,585 [screen.py:_send_action()] - printer.gcode.script: {'script': 'M18'}
+2026-05-18 20:28:17,107 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G91\nG0 x+25 F3000'}
+2026-05-18 20:28:17,111 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: G90
+2026-05-18 20:28:17,130 [screen.py:show_popup_message()] - error: Must home axis first: -3.000 0.000 144.935 [0.000]
+2026-05-18 20:28:25,152 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:28:26,032 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 20:28:26,064 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:30:10,521 [printer.py:change_state()] - Changing state from 'ready' to 'disconnected'
+2026-05-18 20:30:10,521 [printer.py:change_state()] - Adding callback for state: disconnected
+2026-05-18 20:30:10,549 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:30:10,549 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:30:10,549 [screen.py:state_disconnected()] - ### Going to disconnected
+2026-05-18 20:30:10,550 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:30:10,650 [screen.py:show_panel()] - Reinitializing panel splash_screen
+2026-05-18 20:30:10,686 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:30:10,704 [screen.py:printer_initializing()] - Klipper has disconnected
+2026-05-18 20:30:14,427 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:30:14,727 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:30:14,727 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:30:14,727 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:30:14,728 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:30:14,728 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:30:14,728 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:30:14,728 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:30:15,005 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:30:15,006 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:30:15,009 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:30:15,015 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:30:15,015 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:30:15,027 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:30:15,064 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:30:15,065 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:30:15,065 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:30:15,068 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:30:15,169 [screen.py:show_panel()] - Reinitializing panel main_menu
+2026-05-18 20:30:15,279 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:30:15,291 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:30:15,297 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:30:15,302 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:30:15,334 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:30:15,345 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:30:15,377 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:30:15,403 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:30:15,736 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:30:15,749 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2026-05-18 20:30:15,926 [heatergraph.py:draw_graph()] - Tempstore not initialized!
+2026-05-18 20:30:16,003 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:30:16,016 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:30:16,016 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:30:16,027 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:30:16,069 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:30:35,059 [printer.py:change_state()] - Changing state from 'ready' to 'disconnected'
+2026-05-18 20:30:35,060 [printer.py:change_state()] - Adding callback for state: disconnected
+2026-05-18 20:30:35,098 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:30:35,099 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:30:35,099 [screen.py:state_disconnected()] - ### Going to disconnected
+2026-05-18 20:30:35,100 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:30:35,217 [screen.py:show_panel()] - Reinitializing panel splash_screen
+2026-05-18 20:30:35,256 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:30:35,276 [screen.py:printer_initializing()] - Klipper has disconnected
+2026-05-18 20:30:38,996 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:30:39,161 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:30:39,302 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:30:39,302 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:30:39,302 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:30:39,302 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:30:39,303 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:30:39,303 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:30:39,303 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:30:39,554 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:30:39,554 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:30:39,554 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:30:39,555 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:30:39,555 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:30:39,555 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:30:39,555 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:30:39,671 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:30:39,671 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:30:39,674 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:30:39,677 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:30:39,677 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:30:39,696 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:30:39,733 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:30:39,734 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:30:39,734 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:30:39,736 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:30:39,847 [screen.py:show_panel()] - Reinitializing panel main_menu
+2026-05-18 20:30:40,077 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:30:40,090 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:30:40,097 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:30:40,103 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:30:40,136 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:30:40,148 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:30:40,203 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:30:40,207 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:30:40,208 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:30:40,209 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:30:40,248 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:30:40,275 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:39:08,497 [screen.py:_go_to_submenu()] - #### Go to submenu more
+2026-05-18 20:39:08,498 [screen.py:_go_to_submenu()] - #### Menu __main
+2026-05-18 20:39:08,507 [screen.py:_load_panel()] - Loading panel: menu
+2026-05-18 20:39:08,576 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:39:08,920 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2026-05-18 20:39:08,928 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2026-05-18 20:39:08,933 [menu.py:arrangeMenuItems()] - X > more bedmesh
+2026-05-18 20:39:08,960 [menu.py:arrangeMenuItems()] - X > more pins
+2026-05-18 20:39:08,965 [menu.py:arrangeMenuItems()] - X > more power
+2026-05-18 20:39:08,970 [menu.py:arrangeMenuItems()] - X > more camera
+2026-05-18 20:39:08,979 [menu.py:arrangeMenuItems()] - X > more input_shaper
+2026-05-18 20:39:08,992 [menu.py:arrangeMenuItems()] - X > more spoolman
+2026-05-18 20:39:08,993 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:39:09,029 [screen.py:_go_to_submenu()] - menu, {{ gettext('More') }}, panel_name=more, items=[{'more bedlevel': {'name': "{{ gettext('Bed Level') }}", 'icon': 'bed-level', 'panel': 'bed_level', 'method': None, 'confirm': None, 'enable': "{{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more bedmesh': {'name': "{{ gettext('Bed Mesh') }}", 'icon': 'bed-mesh', 'panel': 'bed_mesh', 'method': None, 'confirm': None, 'enable': "{{ 'bed_mesh' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more zoffset': {'name': "{{ gettext('Z Calibrate') }}", 'icon': 'z-farther', 'panel': 'zcalibrate', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more limits': {'name': "{{ gettext('Limits') }}", 'icon': 'fine-tune', 'panel': 'limits', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more fan': {'name': "{{ gettext('Fan') }}", 'icon': 'fan', 'panel': 'fan', 'method': None, 'confirm': None, 'enable': '{{ printer.fans.count > 0 }}', 'params': '{}', 'style': None}}, {'more led': {'name': "{{ gettext('Leds') }}", 'icon': 'light', 'panel': 'led', 'method': None, 'confirm': None, 'enable': '{{ printer.leds.count > 0 }}', 'params': '{}', 'style': None}}, {'more macros': {'name': "{{ gettext('Macros') }}", 'icon': 'custom-script', 'panel': 'gcode_macros', 'method': None, 'confirm': None, 'enable': '{{ printer.gcode_macros.count > 0 }}', 'params': '{}', 'style': None}}, {'more pins': {'name': "{{ gettext('Pins') }}", 'icon': 'hashtag', 'panel': 'pins', 'method': None, 'confirm': None, 'enable': '{{ printer.output_pins.count > 0 or printer.pwm_tools.count > 0 }}', 'params': '{}', 'style': None}}, {'more power': {'name': "{{ gettext('Power') }}", 'icon': 'shutdown', 'panel': 'power', 'method': None, 'confirm': None, 'enable': '{{ moonraker.power_devices.count > 0 }}', 'params': '{}', 'style': None}}, {'more camera': {'name': "{{ gettext('Camera') }}", 'icon': 'camera', 'panel': 'camera', 'method': None, 'confirm': None, 'enable': '{{ moonraker.cameras.count > 0 }}', 'params': '{}', 'style': None}}, {'more console': {'name': "{{ gettext('Console') }}", 'icon': 'console', 'panel': 'console', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more updater': {'name': "{{ gettext('Update') }}", 'icon': 'refresh', 'panel': 'updater', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more input_shaper': {'name': "{{ gettext('Input Shaper') }}", 'icon': 'move', 'panel': 'input_shaper', 'method': None, 'confirm': None, 'enable': "{{ 'input_shaper' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more save': {'name': "{{ gettext('Save Config') }}", 'icon': 'complete', 'panel': None, 'method': 'ks_confirm_save', 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more settings': {'name': 'KlipperScreen', 'icon': 'settings', 'panel': 'settings', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more network': {'name': "{{ gettext('Network') }}", 'icon': 'network', 'panel': 'network', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more notifications': {'name': "{{ gettext('Notifications') }}", 'icon': 'notifications', 'panel': 'notifications', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more spoolman': {'name': 'Spoolman', 'icon': 'spoolman', 'panel': 'spoolman', 'method': None, 'confirm': None, 'enable': '{{ moonraker.spoolman }}', 'params': '{}', 'style': None}}, {'more system': {'name': "{{ gettext('System') }}", 'icon': 'info', 'panel': 'system', 'method': None, 'confirm': None, 'enable': '{{ moonraker_connected }}', 'params': '{}', 'style': None}}, {'more fine_tune': {'name': "{{ gettext('Fine Tuning') }}", 'icon': 'fine-tune', 'panel': 'fine_tune', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}]
+2026-05-18 20:39:10,591 [screen.py:_load_panel()] - Loading panel: led
+2026-05-18 20:39:10,620 [led.py:color_selector()] - led chamber
+2026-05-18 20:39:10,624 [printer.py:get_led_color_order()] - Colors in led: W
+2026-05-18 20:39:10,625 [led.py:set_color()] - color: [0, 0, 0, 1]
+2026-05-18 20:39:10,692 [KlippyRest.py:_do_request()] - 404 Client Error>>Key miscellaneous in namespace mainsail not found for url>>http://127.0.0.1:7125/server/database/item?namespace=mainsail&key=miscellaneous.entries
+2026-05-18 20:39:10,693 [led.py:color_selector()] - Adding preset: off
+2026-05-18 20:39:10,694 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:10,696 [led.py:color_selector()] - Adding preset: on
+2026-05-18 20:39:10,697 [led.py:set_color()] - color: [0, 0, 0, 1]
+2026-05-18 20:39:10,728 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more > led
+2026-05-18 20:39:10,731 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:10,764 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:11,014 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:11,266 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:11,516 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:11,742 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:11,742 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:11,770 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:12,017 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:12,268 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:12,510 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:12,510 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:12,531 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:12,769 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:13,019 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:13,158 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:13,159 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:13,270 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:13,521 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:13,714 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:13,714 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:13,774 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:14,022 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:14,218 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:14,218 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:14,272 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:14,523 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:14,702 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:14,702 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:14,774 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:15,025 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:15,234 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:15,234 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:15,278 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:15,526 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:15,714 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:15,714 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:15,781 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:16,028 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:16,194 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:16,194 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:16,279 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:16,530 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:16,770 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:16,770 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:16,791 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:17,031 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:17,250 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:17,250 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:17,282 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:17,533 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:17,778 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:17,778 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:17,799 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:18,036 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:18,258 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:18,259 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:18,288 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:18,537 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:18,762 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:18,762 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:18,788 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:19,039 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:19,290 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:19,291 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:19,293 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:19,541 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:19,746 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:19,746 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:19,792 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:20,043 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:20,178 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:20,178 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:20,293 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:20,544 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:20,634 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:20,634 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:20,795 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:21,042 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:21,042 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:21,063 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:21,297 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:21,522 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:21,522 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:21,547 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:21,797 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:21,882 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:21,882 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:22,048 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:22,266 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:22,266 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:22,302 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:22,550 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:22,615 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:22,616 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:22,801 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:22,962 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:22,962 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:23,051 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:23,250 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:23,250 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:23,301 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:23,538 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:23,539 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:23,567 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:23,802 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:23,804 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:23,806 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,054 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,118 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:24,119 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:24,258 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,258 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:24,305 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,474 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:24,474 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:24,556 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:24,714 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,714 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:24,807 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:24,930 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:24,930 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:25,057 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:25,146 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:25,146 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:25,309 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:25,373 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:25,373 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:25,554 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:25,554 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:25,575 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:25,769 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:25,770 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:25,810 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:25,990 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:25,990 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:26,061 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:26,206 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:26,206 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:26,311 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:26,446 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:26,446 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:26,563 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:26,662 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:26,662 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:26,816 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:26,894 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:26,894 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:27,064 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:27,131 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:27,132 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:27,314 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:27,379 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:27,380 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:27,565 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:27,670 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:27,670 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:27,816 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:27,910 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:27,910 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:28,067 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:28,318 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:28,320 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:28,321 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:28,569 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:28,633 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:28,634 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:28,820 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:28,942 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:28,942 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:29,070 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:29,254 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:29,254 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:29,320 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:29,570 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:29,638 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:29,638 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:29,821 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:29,926 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:29,926 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:30,072 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:30,324 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:30,390 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:30,391 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:30,574 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:30,825 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:31,075 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:31,327 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:31,577 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:31,828 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:32,079 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:32,330 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:32,581 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:32,831 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:33,082 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:33,333 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:33,584 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:33,837 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:34,086 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:34,337 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:34,588 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:34,664 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:34,665 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:34,838 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:35,089 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:35,155 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:35,156 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:35,340 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:35,574 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:35,574 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:35,596 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:35,841 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:36,091 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:36,159 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:36,160 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:36,343 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:36,593 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:36,657 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:36,657 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:36,844 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:37,095 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:37,206 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:37,206 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:37,346 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:37,597 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:37,848 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:38,099 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:38,168 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:38,169 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:38,349 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:38,600 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:38,851 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:39,104 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:39,355 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:39,606 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:39,855 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:40,106 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:40,356 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:40,607 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:40,858 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:41,109 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:41,360 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:41,610 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:41,861 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:42,112 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:42,362 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:42,613 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:42,863 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:43,114 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:43,366 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:43,616 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:43,868 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:44,118 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:44,369 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:44,620 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:44,873 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:45,124 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:45,372 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:45,623 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:45,874 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:46,125 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:46,376 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:46,627 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:46,878 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:47,129 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:47,380 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:47,631 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:47,882 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:48,133 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:48,199 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:48,200 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:48,383 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:48,546 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:48,546 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:48,635 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:48,886 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:49,098 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:49,098 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:49,140 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:49,388 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:49,578 [led.py:set_color()] - color: [0, 0, 0, 1.0]
+2026-05-18 20:39:49,578 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0 GREEN=0 BLUE=0 WHITE=1.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:49,642 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:49,890 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 1.0]
+2026-05-18 20:39:50,082 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:50,082 [screen.py:_send_action()] - printer.gcode.script: {'script': 'SET_LED LED="chamber" RED=0.0 GREEN=0.0 BLUE=0.0 WHITE=0.0 SYNC=0 TRANSMIT=1'}
+2026-05-18 20:39:50,145 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:50,394 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:50,643 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:50,893 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:51,146 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:51,395 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:51,646 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:51,897 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:52,148 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:52,398 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:52,649 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:52,900 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:53,156 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:53,402 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:53,653 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:53,904 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:54,157 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:54,406 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:54,657 [led.py:set_color()] - color: [0.0, 0.0, 0.0, 0.0]
+2026-05-18 20:39:54,873 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 20:39:54,904 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:40:00,801 [screen.py:_go_to_submenu()] - #### Go to submenu more
+2026-05-18 20:40:00,801 [screen.py:_go_to_submenu()] - #### Menu __main
+2026-05-18 20:40:00,860 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2026-05-18 20:40:00,870 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2026-05-18 20:40:00,875 [menu.py:arrangeMenuItems()] - X > more bedmesh
+2026-05-18 20:40:00,901 [menu.py:arrangeMenuItems()] - X > more pins
+2026-05-18 20:40:00,906 [menu.py:arrangeMenuItems()] - X > more power
+2026-05-18 20:40:00,911 [menu.py:arrangeMenuItems()] - X > more camera
+2026-05-18 20:40:00,920 [menu.py:arrangeMenuItems()] - X > more input_shaper
+2026-05-18 20:40:00,934 [menu.py:arrangeMenuItems()] - X > more spoolman
+2026-05-18 20:40:00,934 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:40:00,963 [screen.py:_go_to_submenu()] - menu, {{ gettext('More') }}, panel_name=more, items=[{'more bedlevel': {'name': "{{ gettext('Bed Level') }}", 'icon': 'bed-level', 'panel': 'bed_level', 'method': None, 'confirm': None, 'enable': "{{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more bedmesh': {'name': "{{ gettext('Bed Mesh') }}", 'icon': 'bed-mesh', 'panel': 'bed_mesh', 'method': None, 'confirm': None, 'enable': "{{ 'bed_mesh' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more zoffset': {'name': "{{ gettext('Z Calibrate') }}", 'icon': 'z-farther', 'panel': 'zcalibrate', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more limits': {'name': "{{ gettext('Limits') }}", 'icon': 'fine-tune', 'panel': 'limits', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more fan': {'name': "{{ gettext('Fan') }}", 'icon': 'fan', 'panel': 'fan', 'method': None, 'confirm': None, 'enable': '{{ printer.fans.count > 0 }}', 'params': '{}', 'style': None}}, {'more led': {'name': "{{ gettext('Leds') }}", 'icon': 'light', 'panel': 'led', 'method': None, 'confirm': None, 'enable': '{{ printer.leds.count > 0 }}', 'params': '{}', 'style': None}}, {'more macros': {'name': "{{ gettext('Macros') }}", 'icon': 'custom-script', 'panel': 'gcode_macros', 'method': None, 'confirm': None, 'enable': '{{ printer.gcode_macros.count > 0 }}', 'params': '{}', 'style': None}}, {'more pins': {'name': "{{ gettext('Pins') }}", 'icon': 'hashtag', 'panel': 'pins', 'method': None, 'confirm': None, 'enable': '{{ printer.output_pins.count > 0 or printer.pwm_tools.count > 0 }}', 'params': '{}', 'style': None}}, {'more power': {'name': "{{ gettext('Power') }}", 'icon': 'shutdown', 'panel': 'power', 'method': None, 'confirm': None, 'enable': '{{ moonraker.power_devices.count > 0 }}', 'params': '{}', 'style': None}}, {'more camera': {'name': "{{ gettext('Camera') }}", 'icon': 'camera', 'panel': 'camera', 'method': None, 'confirm': None, 'enable': '{{ moonraker.cameras.count > 0 }}', 'params': '{}', 'style': None}}, {'more console': {'name': "{{ gettext('Console') }}", 'icon': 'console', 'panel': 'console', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more updater': {'name': "{{ gettext('Update') }}", 'icon': 'refresh', 'panel': 'updater', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more input_shaper': {'name': "{{ gettext('Input Shaper') }}", 'icon': 'move', 'panel': 'input_shaper', 'method': None, 'confirm': None, 'enable': "{{ 'input_shaper' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more save': {'name': "{{ gettext('Save Config') }}", 'icon': 'complete', 'panel': None, 'method': 'ks_confirm_save', 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more settings': {'name': 'KlipperScreen', 'icon': 'settings', 'panel': 'settings', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more network': {'name': "{{ gettext('Network') }}", 'icon': 'network', 'panel': 'network', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more notifications': {'name': "{{ gettext('Notifications') }}", 'icon': 'notifications', 'panel': 'notifications', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more spoolman': {'name': 'Spoolman', 'icon': 'spoolman', 'panel': 'spoolman', 'method': None, 'confirm': None, 'enable': '{{ moonraker.spoolman }}', 'params': '{}', 'style': None}}, {'more system': {'name': "{{ gettext('System') }}", 'icon': 'info', 'panel': 'system', 'method': None, 'confirm': None, 'enable': '{{ moonraker_connected }}', 'params': '{}', 'style': None}}, {'more fine_tune': {'name': "{{ gettext('Fine Tuning') }}", 'icon': 'fine-tune', 'panel': 'fine_tune', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}]
+2026-05-18 20:40:02,867 [screen.py:_load_panel()] - Loading panel: settings
+2026-05-18 20:40:03,098 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more > settings
+2026-05-18 20:40:05,443 [screen_panel.py:switch_config_option()] - [main] 24htime toggled False
+2026-05-18 20:40:26,444 [screen_panel.py:switch_config_option()] - [main] side_macro_shortcut toggled True
+2026-05-18 20:40:27,903 [screen_panel.py:switch_config_option()] - [main] side_macro_shortcut toggled False
+2026-05-18 20:40:30,118 [screen_panel.py:load_menu()] - loading menu printers
+2026-05-18 20:40:30,123 [screen_panel.py:load_menu()] - self.menu: ['settings_menu', 'printers_menu']
+2026-05-18 20:40:31,468 [screen_panel.py:unload_menu()] - self.menu: ['settings_menu']
+2026-05-18 20:44:38,398 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 20:44:38,398 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 20:44:38,398 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 20:44:38,587 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 20:44:38,588 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 20:44:38,685 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = klipper_device LIGHTS_ON
+screen_off_devices = klipper_device LIGHTS_OFF
+=======================
+2026-05-18 20:44:38,688 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-18 20:44:38,689 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 20:44:38,858 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 20:44:38,859 [config.py:install_language()] - Using lang en
+2026-05-18 20:44:38,878 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 20:44:38,880 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 20:44:38,881 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 20:44:38,881 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 20:44:38,884 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 20:44:39,187 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 20:44:39,350 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:44:39,461 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:44:39,462 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:44:39,462 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 20:44:39,463 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:44:39,562 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 20:44:39,627 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:44:39,649 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 20:44:39,749 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 20:44:39,768 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:44:39,769 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:44:44,156 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 20:44:44,156 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 20:44:44,157 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 20:44:44,180 [_logging.py:info()] - Websocket connected
+2026-05-18 20:44:44,181 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 20:44:44,199 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 20:44:44,280 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 20:44:44,320 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:44:44,326 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 20:44:44,502 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:44:44,502 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:44:44,503 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:44:44,503 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:44:44,503 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:44:44,503 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:44:44,503 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:44:44,773 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:44:44,773 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:44:44,776 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:44:44,778 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:44:44,778 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:44:44,818 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 3600
+2026-05-18 20:44:44,818 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 3600
+2026-05-18 20:44:44,818 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:44:44,826 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:44:44,934 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 20:44:45,168 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:44:45,180 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:44:45,192 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:44:45,202 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:44:45,238 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:44:45,249 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:44:45,287 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:44:45,293 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:44:49,642 [screen.py:_go_to_submenu()] - #### Go to submenu more
+2026-05-18 20:44:49,642 [screen.py:_go_to_submenu()] - #### Menu __main
+2026-05-18 20:44:49,655 [screen.py:_load_panel()] - Loading panel: menu
+2026-05-18 20:44:49,753 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:44:50,048 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2026-05-18 20:44:50,056 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2026-05-18 20:44:50,060 [menu.py:arrangeMenuItems()] - X > more bedmesh
+2026-05-18 20:44:50,088 [menu.py:arrangeMenuItems()] - X > more pins
+2026-05-18 20:44:50,093 [menu.py:arrangeMenuItems()] - X > more power
+2026-05-18 20:44:50,098 [menu.py:arrangeMenuItems()] - X > more camera
+2026-05-18 20:44:50,108 [menu.py:arrangeMenuItems()] - X > more input_shaper
+2026-05-18 20:44:50,121 [menu.py:arrangeMenuItems()] - X > more spoolman
+2026-05-18 20:44:50,121 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:44:50,156 [screen.py:_go_to_submenu()] - menu, {{ gettext('More') }}, panel_name=more, items=[{'more bedlevel': {'name': "{{ gettext('Bed Level') }}", 'icon': 'bed-level', 'panel': 'bed_level', 'method': None, 'confirm': None, 'enable': "{{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more bedmesh': {'name': "{{ gettext('Bed Mesh') }}", 'icon': 'bed-mesh', 'panel': 'bed_mesh', 'method': None, 'confirm': None, 'enable': "{{ 'bed_mesh' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more zoffset': {'name': "{{ gettext('Z Calibrate') }}", 'icon': 'z-farther', 'panel': 'zcalibrate', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more limits': {'name': "{{ gettext('Limits') }}", 'icon': 'fine-tune', 'panel': 'limits', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more fan': {'name': "{{ gettext('Fan') }}", 'icon': 'fan', 'panel': 'fan', 'method': None, 'confirm': None, 'enable': '{{ printer.fans.count > 0 }}', 'params': '{}', 'style': None}}, {'more led': {'name': "{{ gettext('Leds') }}", 'icon': 'light', 'panel': 'led', 'method': None, 'confirm': None, 'enable': '{{ printer.leds.count > 0 }}', 'params': '{}', 'style': None}}, {'more macros': {'name': "{{ gettext('Macros') }}", 'icon': 'custom-script', 'panel': 'gcode_macros', 'method': None, 'confirm': None, 'enable': '{{ printer.gcode_macros.count > 0 }}', 'params': '{}', 'style': None}}, {'more pins': {'name': "{{ gettext('Pins') }}", 'icon': 'hashtag', 'panel': 'pins', 'method': None, 'confirm': None, 'enable': '{{ printer.output_pins.count > 0 or printer.pwm_tools.count > 0 }}', 'params': '{}', 'style': None}}, {'more power': {'name': "{{ gettext('Power') }}", 'icon': 'shutdown', 'panel': 'power', 'method': None, 'confirm': None, 'enable': '{{ moonraker.power_devices.count > 0 }}', 'params': '{}', 'style': None}}, {'more camera': {'name': "{{ gettext('Camera') }}", 'icon': 'camera', 'panel': 'camera', 'method': None, 'confirm': None, 'enable': '{{ moonraker.cameras.count > 0 }}', 'params': '{}', 'style': None}}, {'more console': {'name': "{{ gettext('Console') }}", 'icon': 'console', 'panel': 'console', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more updater': {'name': "{{ gettext('Update') }}", 'icon': 'refresh', 'panel': 'updater', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more input_shaper': {'name': "{{ gettext('Input Shaper') }}", 'icon': 'move', 'panel': 'input_shaper', 'method': None, 'confirm': None, 'enable': "{{ 'input_shaper' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more save': {'name': "{{ gettext('Save Config') }}", 'icon': 'complete', 'panel': None, 'method': 'ks_confirm_save', 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more settings': {'name': 'KlipperScreen', 'icon': 'settings', 'panel': 'settings', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more network': {'name': "{{ gettext('Network') }}", 'icon': 'network', 'panel': 'network', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more notifications': {'name': "{{ gettext('Notifications') }}", 'icon': 'notifications', 'panel': 'notifications', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more spoolman': {'name': 'Spoolman', 'icon': 'spoolman', 'panel': 'spoolman', 'method': None, 'confirm': None, 'enable': '{{ moonraker.spoolman }}', 'params': '{}', 'style': None}}, {'more system': {'name': "{{ gettext('System') }}", 'icon': 'info', 'panel': 'system', 'method': None, 'confirm': None, 'enable': '{{ moonraker_connected }}', 'params': '{}', 'style': None}}, {'more fine_tune': {'name': "{{ gettext('Fine Tuning') }}", 'icon': 'fine-tune', 'panel': 'fine_tune', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}]
+2026-05-18 20:44:50,915 [screen.py:_load_panel()] - Loading panel: settings
+2026-05-18 20:44:51,129 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more > settings
+2026-05-18 20:44:56,969 [screen_panel.py:on_dropdown_change()] - [main] screen_blanking changed to 60
+2026-05-18 20:44:56,994 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:44:56,994 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:45:40,152 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:45:57,153 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 20:48:02,202 [printer.py:change_state()] - Changing state from 'ready' to 'disconnected'
+2026-05-18 20:48:02,202 [printer.py:change_state()] - Adding callback for state: disconnected
+2026-05-18 20:48:02,205 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:48:02,206 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:48:02,465 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:48:02,465 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:48:02,465 [screen.py:state_disconnected()] - ### Going to disconnected
+2026-05-18 20:48:02,466 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:48:02,469 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:48:02,470 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:48:02,582 [screen.py:show_panel()] - Reinitializing panel splash_screen
+2026-05-18 20:48:02,618 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:48:02,636 [screen.py:printer_initializing()] - Klipper has disconnected
+2026-05-18 20:48:03,156 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-18 20:48:06,060 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:48:06,390 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:48:06,390 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:48:06,390 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:48:06,391 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:48:06,391 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:48:06,391 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:48:06,398 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:48:06,637 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:48:06,637 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:48:06,639 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:48:06,642 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:48:06,642 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:48:06,701 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:48:06,701 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:48:06,701 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:48:06,720 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:48:06,836 [screen.py:show_panel()] - Reinitializing panel main_menu
+2026-05-18 20:48:06,977 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:48:06,988 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:48:06,994 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:48:07,000 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:48:07,031 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:48:07,042 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:48:07,073 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:48:07,073 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:48:07,259 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:48:07,402 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:48:07,402 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:48:07,402 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:48:07,402 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:48:07,403 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:48:07,403 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:48:07,403 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:48:07,636 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:48:07,638 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:48:07,638 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:48:07,659 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:48:07,753 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:49:03,154 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 20:49:03,344 [printer.py:change_state()] - Changing state from 'ready' to 'disconnected'
+2026-05-18 20:49:03,345 [printer.py:change_state()] - Adding callback for state: disconnected
+2026-05-18 20:49:03,345 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:49:03,345 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:49:03,413 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:49:03,414 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:49:03,414 [screen.py:state_disconnected()] - ### Going to disconnected
+2026-05-18 20:49:03,415 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:49:03,419 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:49:03,419 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:49:03,576 [screen.py:show_panel()] - Reinitializing panel splash_screen
+2026-05-18 20:49:03,622 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:49:03,640 [screen.py:printer_initializing()] - Klipper has disconnected
+2026-05-18 20:49:03,642 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-18 20:49:07,251 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:49:07,587 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:49:07,588 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:49:07,829 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:49:07,829 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:49:07,832 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:49:07,834 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:49:07,835 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:49:07,869 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:49:07,870 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:49:07,870 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:49:07,877 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:49:07,988 [screen.py:show_panel()] - Reinitializing panel main_menu
+2026-05-18 20:49:08,166 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:49:08,177 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:49:08,183 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:49:08,188 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:49:08,219 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:49:08,231 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:49:08,277 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:49:08,279 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:49:08,280 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:49:08,560 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:49:08,560 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:49:08,561 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:49:08,561 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:49:08,561 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:49:08,561 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:49:08,561 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:49:08,830 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:49:08,832 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:49:08,832 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:49:08,852 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:49:08,951 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:51:23,806 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-18 20:51:23,807 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-18 20:51:23,807 [functions.py:log_start()] - Python version: 3.13
+2026-05-18 20:51:24,310 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-18 20:51:24,311 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-18 20:51:24,426 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = Auto Lights
+screen_off_devices = Auto Lights
+=======================
+2026-05-18 20:51:24,429 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+screen_blanking = 60
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-18 20:51:24,430 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-18 20:51:24,681 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-18 20:51:24,681 [config.py:install_language()] - Using lang en
+2026-05-18 20:51:24,708 [screen.py:__init__()] - Display for xset: :0
+2026-05-18 20:51:24,711 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-18 20:51:24,711 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-18 20:51:24,711 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-18 20:51:24,714 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-18 20:51:25,018 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-18 20:51:25,533 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:51:25,751 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:51:25,751 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:51:25,752 [screen.py:initial_connection()] - Default printer: None
+2026-05-18 20:51:25,752 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:51:25,851 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-18 20:51:25,935 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-18 20:51:25,957 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-18 20:51:26,056 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-18 20:51:26,076 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:51:26,076 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:51:29,870 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-18 20:51:29,871 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-18 20:51:29,871 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-18 20:51:29,886 [_logging.py:info()] - Websocket connected
+2026-05-18 20:51:29,888 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-18 20:51:29,896 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-18 20:51:29,941 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-18 20:51:29,971 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-18 20:51:29,973 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}]}
+2026-05-18 20:51:29,973 [printer.py:configure_power_devices()] - Power devices: {'Auto Lights': {'status': 'on'}}
+2026-05-18 20:51:29,974 [printer.py:configure_cameras()] - Cameras: []
+2026-05-18 20:51:30,290 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-18 20:51:30,290 [printer.py:log_counts()] - # Extruders: 2
+2026-05-18 20:51:30,290 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-18 20:51:30,290 [printer.py:log_counts()] - # Fans: 5
+2026-05-18 20:51:30,290 [printer.py:log_counts()] - # Output pins: 0
+2026-05-18 20:51:30,291 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-18 20:51:30,291 [printer.py:log_counts()] - # Leds: 1
+2026-05-18 20:51:30,568 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-18 20:51:30,568 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-18 20:51:30,571 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-18 20:51:30,573 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-18 20:51:30,574 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:51:30,574 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-18 20:51:30,575 [screen.py:_finish_init()] - Printer initialized
+2026-05-18 20:51:30,616 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 60
+2026-05-18 20:51:30,616 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 60
+2026-05-18 20:51:30,617 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-18 20:51:30,619 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-18 20:51:30,717 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-18 20:51:30,924 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-18 20:51:30,937 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-18 20:51:30,952 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-18 20:51:30,966 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-18 20:51:31,007 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-18 20:51:31,018 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:51:31,049 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-18 20:51:31,075 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-18 20:52:25,868 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-18 20:52:30,870 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 20:52:30,885 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:52:30,885 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-18 20:52:30,924 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 20:52:34,283 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:52:34,284 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:52:34,314 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:52:34,314 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-18 20:52:34,435 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 20:52:34,871 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-18 20:52:41,833 [screen.py:_go_to_submenu()] - #### Go to submenu more
+2026-05-18 20:52:41,834 [screen.py:_go_to_submenu()] - #### Menu __main
+2026-05-18 20:52:41,841 [screen.py:_load_panel()] - Loading panel: menu
+2026-05-18 20:52:41,908 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:52:42,266 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2026-05-18 20:52:42,274 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2026-05-18 20:52:42,278 [menu.py:arrangeMenuItems()] - X > more bedmesh
+2026-05-18 20:52:42,305 [menu.py:arrangeMenuItems()] - X > more pins
+2026-05-18 20:52:42,315 [menu.py:arrangeMenuItems()] - X > more camera
+2026-05-18 20:52:42,324 [menu.py:arrangeMenuItems()] - X > more input_shaper
+2026-05-18 20:52:42,337 [menu.py:arrangeMenuItems()] - X > more spoolman
+2026-05-18 20:52:42,338 [menu.py:evaluate_enable()] - moonraker connected True
+2026-05-18 20:52:42,374 [screen.py:_go_to_submenu()] - menu, {{ gettext('More') }}, panel_name=more, items=[{'more bedlevel': {'name': "{{ gettext('Bed Level') }}", 'icon': 'bed-level', 'panel': 'bed_level', 'method': None, 'confirm': None, 'enable': "{{ 'bed_screws' in printer.config_sections or 'screws_tilt_adjust' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more bedmesh': {'name': "{{ gettext('Bed Mesh') }}", 'icon': 'bed-mesh', 'panel': 'bed_mesh', 'method': None, 'confirm': None, 'enable': "{{ 'bed_mesh' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more zoffset': {'name': "{{ gettext('Z Calibrate') }}", 'icon': 'z-farther', 'panel': 'zcalibrate', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more limits': {'name': "{{ gettext('Limits') }}", 'icon': 'fine-tune', 'panel': 'limits', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more fan': {'name': "{{ gettext('Fan') }}", 'icon': 'fan', 'panel': 'fan', 'method': None, 'confirm': None, 'enable': '{{ printer.fans.count > 0 }}', 'params': '{}', 'style': None}}, {'more led': {'name': "{{ gettext('Leds') }}", 'icon': 'light', 'panel': 'led', 'method': None, 'confirm': None, 'enable': '{{ printer.leds.count > 0 }}', 'params': '{}', 'style': None}}, {'more macros': {'name': "{{ gettext('Macros') }}", 'icon': 'custom-script', 'panel': 'gcode_macros', 'method': None, 'confirm': None, 'enable': '{{ printer.gcode_macros.count > 0 }}', 'params': '{}', 'style': None}}, {'more pins': {'name': "{{ gettext('Pins') }}", 'icon': 'hashtag', 'panel': 'pins', 'method': None, 'confirm': None, 'enable': '{{ printer.output_pins.count > 0 or printer.pwm_tools.count > 0 }}', 'params': '{}', 'style': None}}, {'more power': {'name': "{{ gettext('Power') }}", 'icon': 'shutdown', 'panel': 'power', 'method': None, 'confirm': None, 'enable': '{{ moonraker.power_devices.count > 0 }}', 'params': '{}', 'style': None}}, {'more camera': {'name': "{{ gettext('Camera') }}", 'icon': 'camera', 'panel': 'camera', 'method': None, 'confirm': None, 'enable': '{{ moonraker.cameras.count > 0 }}', 'params': '{}', 'style': None}}, {'more console': {'name': "{{ gettext('Console') }}", 'icon': 'console', 'panel': 'console', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more updater': {'name': "{{ gettext('Update') }}", 'icon': 'refresh', 'panel': 'updater', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more input_shaper': {'name': "{{ gettext('Input Shaper') }}", 'icon': 'move', 'panel': 'input_shaper', 'method': None, 'confirm': None, 'enable': "{{ 'input_shaper' in printer.config_sections }}", 'params': '{}', 'style': None}}, {'more save': {'name': "{{ gettext('Save Config') }}", 'icon': 'complete', 'panel': None, 'method': 'ks_confirm_save', 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more settings': {'name': 'KlipperScreen', 'icon': 'settings', 'panel': 'settings', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more network': {'name': "{{ gettext('Network') }}", 'icon': 'network', 'panel': 'network', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more notifications': {'name': "{{ gettext('Notifications') }}", 'icon': 'notifications', 'panel': 'notifications', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}, {'more spoolman': {'name': 'Spoolman', 'icon': 'spoolman', 'panel': 'spoolman', 'method': None, 'confirm': None, 'enable': '{{ moonraker.spoolman }}', 'params': '{}', 'style': None}}, {'more system': {'name': "{{ gettext('System') }}", 'icon': 'info', 'panel': 'system', 'method': None, 'confirm': None, 'enable': '{{ moonraker_connected }}', 'params': '{}', 'style': None}}, {'more fine_tune': {'name': "{{ gettext('Fine Tuning') }}", 'icon': 'fine-tune', 'panel': 'fine_tune', 'method': None, 'confirm': None, 'enable': 'True', 'params': '{}', 'style': None}}]
+2026-05-18 20:52:46,135 [screen.py:_load_panel()] - Loading panel: settings
+2026-05-18 20:52:46,380 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more > settings
+2026-05-18 20:52:53,945 [screen_panel.py:on_dropdown_change()] - [main] screen_blanking changed to 300
+2026-05-18 20:52:53,980 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-18 20:52:53,981 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-18 20:53:46,872 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 20:53:46,900 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:53:46,901 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-18 20:53:47,166 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 20:54:18,790 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 20:54:18,791 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 20:54:18,815 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:54:18,815 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-18 20:54:18,876 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-18 20:54:19,013 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 20:54:27,912 [screen_panel.py:on_dropdown_change()] - [main] screen_blanking_printing changed to off
+2026-05-18 20:54:29,523 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-18 20:54:29,577 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-18 20:59:29,869 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 20:59:29,885 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 20:59:29,885 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-18 20:59:30,037 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 21:00:58,153 [screensaver.py:close()] - Closing Screensaver
+2026-05-18 21:00:58,154 [screen.py:wake_screen()] - Screen wake up
+2026-05-18 21:00:58,182 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 21:00:58,183 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-18 21:00:58,323 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-18 21:00:58,871 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-18 21:07:15,871 [screensaver.py:show()] - Showing Screensaver
+2026-05-18 21:07:15,889 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-18 21:07:15,889 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-18 21:07:16,091 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-19 13:58:27,642 [screensaver.py:close()] - Closing Screensaver
+2026-05-19 13:58:27,643 [screen.py:wake_screen()] - Screen wake up
+2026-05-19 13:58:27,672 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-19 13:58:27,672 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-19 13:58:27,744 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-19 13:58:27,872 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-19 14:03:27,869 [screensaver.py:show()] - Showing Screensaver
+2026-05-19 14:03:27,884 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-19 14:03:27,884 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-19 14:03:28,036 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 10:46:37,595 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-20 10:46:37,595 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-20 10:46:37,595 [functions.py:log_start()] - Python version: 3.13
+2026-05-20 10:46:38,113 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-20 10:46:38,114 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-20 10:46:38,228 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = Auto Lights
+screen_off_devices = Auto Lights
+=======================
+2026-05-20 10:46:38,232 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+screen_blanking = 300
+screen_blanking_printing = off
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-20 10:46:38,232 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-20 10:46:38,486 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-20 10:46:38,486 [config.py:install_language()] - Using lang en
+2026-05-20 10:46:38,511 [screen.py:__init__()] - Display for xset: :0
+2026-05-20 10:46:38,513 [screen.py:__init__()] - Screen 0: 1024x768
+2026-05-20 10:46:38,514 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-20 10:46:38,514 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-20 10:46:38,517 [screen.py:__init__()] - Screen resolution: 1024x768
+2026-05-20 10:46:38,819 [KlippyGtk.py:__init__()] - Font size: 25.6 (medium)
+2026-05-20 10:46:39,352 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 10:46:39,774 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 10:46:39,775 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 10:46:39,776 [screen.py:initial_connection()] - Default printer: None
+2026-05-20 10:46:39,776 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 10:46:39,873 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-20 10:46:39,959 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-20 10:46:39,981 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-20 10:46:40,076 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-20 10:46:40,095 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 10:46:40,095 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 10:46:43,921 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-20 10:46:43,922 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-20 10:46:43,922 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-20 10:46:43,937 [_logging.py:info()] - Websocket connected
+2026-05-20 10:46:43,940 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-20 10:46:43,949 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-20 10:46:43,997 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-20 10:46:44,029 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-20 10:46:44,031 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}]}
+2026-05-20 10:46:44,031 [printer.py:configure_power_devices()] - Power devices: {'Auto Lights': {'status': 'on'}}
+2026-05-20 10:46:44,032 [printer.py:configure_cameras()] - Cameras: []
+2026-05-20 10:46:44,363 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # Extruders: 2
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # Fans: 5
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # Output pins: 0
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-20 10:46:44,364 [printer.py:log_counts()] - # Leds: 1
+2026-05-20 10:46:44,640 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-20 10:46:44,641 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-20 10:46:44,644 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-20 10:46:44,646 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-20 10:46:44,646 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 10:46:44,647 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 10:46:44,648 [screen.py:_finish_init()] - Printer initialized
+2026-05-20 10:46:44,683 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 10:46:44,683 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 10:46:44,683 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-20 10:46:44,686 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 10:46:44,781 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-20 10:46:44,995 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-20 10:46:45,007 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-20 10:46:45,021 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-20 10:46:45,035 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-20 10:46:45,077 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-20 10:46:45,087 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 10:46:45,119 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-20 10:46:45,145 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-20 10:47:39,919 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 10:51:44,920 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 10:51:44,935 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 10:51:44,935 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 10:51:45,048 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 11:04:25,043 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-20 11:04:25,043 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-20 11:04:25,044 [functions.py:log_start()] - Python version: 3.13
+2026-05-20 11:04:25,662 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-20 11:04:25,662 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-20 11:04:25,911 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = Auto Lights
+screen_off_devices = Auto Lights
+=======================
+2026-05-20 11:04:25,921 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+screen_blanking = 300
+screen_blanking_printing = off
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-20 11:04:25,923 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-20 11:04:26,457 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-20 11:04:26,458 [config.py:install_language()] - Using lang en
+2026-05-20 11:04:26,507 [screen.py:__init__()] - Display for xset: :0
+2026-05-20 11:04:26,512 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-20 11:04:26,512 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-20 11:04:26,514 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-20 11:04:26,520 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-20 11:04:27,195 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-20 11:04:27,966 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 11:04:28,334 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:04:28,335 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:04:28,336 [screen.py:initial_connection()] - Default printer: None
+2026-05-20 11:04:28,337 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 11:04:28,513 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-20 11:04:28,678 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-20 11:04:28,730 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-20 11:04:28,905 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-20 11:04:28,930 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:04:28,931 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:04:33,110 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-20 11:04:33,110 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-20 11:04:33,110 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-20 11:04:33,126 [_logging.py:info()] - Websocket connected
+2026-05-20 11:04:33,128 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-20 11:04:33,137 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-20 11:04:33,188 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-20 11:04:33,231 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-20 11:04:33,239 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}]}
+2026-05-20 11:04:33,239 [printer.py:configure_power_devices()] - Power devices: {'Auto Lights': {'status': 'on'}}
+2026-05-20 11:04:33,239 [printer.py:configure_cameras()] - Cameras: []
+2026-05-20 11:04:33,663 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-20 11:04:33,664 [printer.py:log_counts()] - # Extruders: 2
+2026-05-20 11:04:33,664 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-20 11:04:33,664 [printer.py:log_counts()] - # Fans: 5
+2026-05-20 11:04:33,665 [printer.py:log_counts()] - # Output pins: 0
+2026-05-20 11:04:33,665 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-20 11:04:33,666 [printer.py:log_counts()] - # Leds: 1
+2026-05-20 11:04:33,951 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-20 11:04:33,951 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-20 11:04:33,959 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-20 11:04:33,971 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-20 11:04:33,972 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 11:04:33,973 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 11:04:33,976 [screen.py:_finish_init()] - Printer initialized
+2026-05-20 11:04:34,047 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:04:34,048 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:04:34,048 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-20 11:04:34,071 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 11:04:34,256 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-20 11:04:34,622 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-20 11:04:34,649 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-20 11:04:34,673 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-20 11:04:34,699 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-20 11:04:34,777 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-20 11:04:34,799 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 11:04:34,862 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-20 11:04:34,915 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-20 11:04:35,284 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <USB/Overhead Enclosure V3_0.4n_0.35mm_PLA_XLIS_5h26m.gcode>'}
+2026-05-20 11:04:35,286 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <USB/Overhead Enclosure V5A_0.4n_0.3mm_PLA_XLIS_7h34m.gcode>'}
+2026-05-20 11:04:35,288 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <USB/Overhead Enclosure V5B_0.4n_0.3mm_PLA_XLIS_5h41m.gcode>'}
+2026-05-20 11:04:35,289 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <USB/Overhead Enclosure V5B_0.4n_0.4mm_PLA_XLIS_4h29m.gcode>'}
+2026-05-20 11:05:28,106 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 11:09:34,158 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 11:09:34,173 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 11:09:34,173 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 11:09:34,221 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 11:45:53,362 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-20 11:45:53,362 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-20 11:45:53,363 [functions.py:log_start()] - Python version: 3.13
+2026-05-20 11:45:54,143 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-20 11:45:54,143 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-20 11:45:54,343 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = Auto Lights
+screen_off_devices = Auto Lights
+=======================
+2026-05-20 11:45:54,350 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+screen_blanking = 300
+screen_blanking_printing = off
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-20 11:45:54,353 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-20 11:45:54,824 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-20 11:45:54,825 [config.py:install_language()] - Using lang en
+2026-05-20 11:45:54,867 [screen.py:__init__()] - Display for xset: :0
+2026-05-20 11:45:54,870 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-20 11:45:54,871 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-20 11:45:54,872 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-20 11:45:54,876 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-20 11:45:55,394 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-20 11:45:55,910 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 11:45:56,121 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:45:56,122 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:45:56,123 [screen.py:initial_connection()] - Default printer: None
+2026-05-20 11:45:56,123 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 11:45:56,222 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-20 11:45:56,306 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-20 11:45:56,328 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-20 11:45:56,426 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-20 11:45:56,445 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:45:56,446 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:46:00,579 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-20 11:46:00,580 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-20 11:46:00,580 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-20 11:46:00,595 [_logging.py:info()] - Websocket connected
+2026-05-20 11:46:00,597 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-20 11:46:00,605 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-20 11:46:00,654 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-20 11:46:00,689 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-20 11:46:00,716 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}]}
+2026-05-20 11:46:00,716 [printer.py:configure_power_devices()] - Power devices: {'Auto Lights': {'status': 'on'}}
+2026-05-20 11:46:00,717 [printer.py:configure_cameras()] - Cameras: []
+2026-05-20 11:46:00,900 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-20 11:46:00,900 [printer.py:log_counts()] - # Extruders: 2
+2026-05-20 11:46:00,901 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-20 11:46:00,901 [printer.py:log_counts()] - # Fans: 5
+2026-05-20 11:46:00,901 [printer.py:log_counts()] - # Output pins: 0
+2026-05-20 11:46:00,901 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-20 11:46:00,901 [printer.py:log_counts()] - # Leds: 1
+2026-05-20 11:46:01,177 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-20 11:46:01,177 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-20 11:46:01,181 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-20 11:46:01,183 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-20 11:46:01,183 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 11:46:01,183 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 11:46:01,185 [screen.py:_finish_init()] - Printer initialized
+2026-05-20 11:46:01,218 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 11:46:01,218 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 11:46:01,218 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-20 11:46:01,221 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 11:46:01,319 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-20 11:46:01,528 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-20 11:46:01,540 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-20 11:46:01,555 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-20 11:46:01,569 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-20 11:46:01,612 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-20 11:46:01,623 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 11:46:01,663 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-20 11:46:01,689 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-20 11:46:11,151 [screen.py:_load_panel()] - Loading panel: gcodes
+2026-05-20 11:46:11,217 [gcodes.py:__init__()] - Thumbsize: 118.3
+2026-05-20 11:46:11,222 [gcodes.py:__init__()] - thumbs
+2026-05-20 11:46:11,236 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 11:46:11,249 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-20 11:46:12,183 [gcodes.py:load_files()] - Loaded in 0.210 seconds
+2026-05-20 11:46:14,190 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-20 11:46:14,223 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 11:46:56,576 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 11:51:14,579 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 11:52:18,779 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 11:52:18,780 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 11:52:18,937 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 11:58:59,591 [screensaver.py:close()] - Closing Screensaver
+2026-05-20 11:58:59,592 [screen.py:wake_screen()] - Screen wake up
+2026-05-20 11:58:59,690 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 11:58:59,690 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 11:58:59,694 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-20 11:58:59,786 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 11:59:02,543 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-20 11:59:05,662 [gcodes.py:change_dir()] - Changing directory to: gcodes/USB
+2026-05-20 11:59:05,663 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 11:59:05,694 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes/USB
+2026-05-20 11:59:05,738 [gcodes.py:load_files()] - Loaded in 0.004 seconds
+2026-05-20 11:59:07,454 [gcodes.py:change_dir()] - Changing directory to: gcodes
+2026-05-20 11:59:07,454 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 11:59:07,456 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 11:59:07,629 [gcodes.py:load_files()] - Loaded in 0.094 seconds
+2026-05-20 11:59:08,274 [gcodes.py:change_dir()] - Changing directory to: gcodes/USB
+2026-05-20 11:59:08,275 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 11:59:08,288 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes/USB
+2026-05-20 11:59:08,312 [gcodes.py:load_files()] - Loaded in 0.002 seconds
+2026-05-20 11:59:09,090 [gcodes.py:change_dir()] - Changing directory to: gcodes
+2026-05-20 11:59:09,091 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 11:59:09,093 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 11:59:09,257 [gcodes.py:load_files()] - Loaded in 0.095 seconds
+2026-05-20 12:03:19,443 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2026-05-20 12:03:19,443 [functions.py:log_start()] - KlipperScreen Version: v0.4.7-15-g006f240
+2026-05-20 12:03:19,444 [functions.py:log_start()] - Python version: 3.13
+2026-05-20 12:03:19,954 [config.py:get_config_file_location()] - Passed config (-c): .
+2026-05-20 12:03:19,954 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2026-05-20 12:03:20,068 [config.py:log_config()] - ===== Config File =====
+[main]
+screen_on_devices = Auto Lights
+screen_off_devices = Auto Lights
+=======================
+2026-05-20 12:03:20,072 [config.py:__init__()] - 
+====== Saved ======
+
+[main]
+screen_blanking = 300
+screen_blanking_printing = off
+24htime = False
+
+[graph Printer]
+extruder1 = False
+
+
+2026-05-20 12:03:20,073 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2026-05-20 12:03:20,323 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2026-05-20 12:03:20,324 [config.py:install_language()] - Using lang en
+2026-05-20 12:03:20,349 [screen.py:__init__()] - Display for xset: :0
+2026-05-20 12:03:20,351 [screen.py:__init__()] - Screen 0: 480x800
+2026-05-20 12:03:20,352 [screen.py:__init__()] - Monitors: 1 using number: 0
+2026-05-20 12:03:20,352 [screen.py:__init__()] - Wayland: False Display name: :0
+2026-05-20 12:03:20,355 [screen.py:__init__()] - Screen resolution: 480x800
+2026-05-20 12:03:20,657 [KlippyGtk.py:__init__()] - Font size: 17.1 (medium)
+2026-05-20 12:03:21,171 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 12:03:21,381 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 12:03:21,382 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 12:03:21,383 [screen.py:initial_connection()] - Default printer: None
+2026-05-20 12:03:21,383 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 12:03:21,484 [screen.py:_load_panel()] - Loading panel: splash_screen
+2026-05-20 12:03:21,566 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2026-05-20 12:03:21,588 [screen.py:printer_initializing()] - Initializing KlipperScreen
+2026-05-20 12:03:21,686 [screen.py:printer_initializing()] - Connecting to Printer
+2026-05-20 12:03:21,705 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 12:03:21,705 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 12:03:26,295 [KlippyWebsocket.py:initial_connect()] - Starting connection
+2026-05-20 12:03:26,295 [KlippyWebsocket.py:connect()] - Attempting to connect
+2026-05-20 12:03:26,296 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2026-05-20 12:03:26,310 [_logging.py:info()] - Websocket connected
+2026-05-20 12:03:26,312 [screen.py:websocket_connected()] - ### websocket_connected
+2026-05-20 12:03:26,320 [screen.py:printer_initializing()] - Moonraker Connected
+2026-05-20 12:03:26,365 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2026-05-20 12:03:26,395 [screen.py:printer_initializing()] - Initializing Klipper Connection
+2026-05-20 12:03:26,397 [printer.py:configure_power_devices()] - Processing power devices: {'devices': [{'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}]}
+2026-05-20 12:03:26,397 [printer.py:configure_power_devices()] - Power devices: {'Auto Lights': {'status': 'on'}}
+2026-05-20 12:03:26,398 [printer.py:configure_cameras()] - Cameras: []
+2026-05-20 12:03:26,658 [printer.py:log_counts()] - Klipper version: v0.13.0-641-g2239041d-dirty
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # Extruders: 2
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # Temperature devices: 1
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # Fans: 5
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # Output pins: 0
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # PWM tools: 0
+2026-05-20 12:03:26,659 [printer.py:log_counts()] - # Leds: 1
+2026-05-20 12:03:26,935 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2026-05-20 12:03:26,935 [printer.py:change_state()] - Adding callback for state: ready
+2026-05-20 12:03:26,938 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2026-05-20 12:03:26,940 [files.py:set_gcodes_path()] - Gcodes path: /home/pi/printer_data/gcodes
+2026-05-20 12:03:26,940 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 12:03:26,941 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 12:03:26,941 [screen.py:_finish_init()] - Printer initialized
+2026-05-20 12:03:26,978 [screen.py:set_dpms_timeout()] - DPMS on :0 set to: 300
+2026-05-20 12:03:26,979 [screen.py:set_screenblanking_timeout()] - Blanking timeout: 300
+2026-05-20 12:03:26,979 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2026-05-20 12:03:26,982 [screen.py:_remove_all_panels()] - Removing all panels
+2026-05-20 12:03:27,084 [screen.py:_load_panel()] - Loading panel: main_menu
+2026-05-20 12:03:27,292 [main_menu.py:__init__()] - ### Making MainMenu
+2026-05-20 12:03:27,303 [main_menu.py:add_device()] - Adding device: extruder
+2026-05-20 12:03:27,318 [main_menu.py:add_device()] - Adding device: extruder1
+2026-05-20 12:03:27,332 [main_menu.py:add_device()] - Adding device: heater_bed
+2026-05-20 12:03:27,374 [menu.py:arrangeMenuItems()] - X > gcodes
+2026-05-20 12:03:27,385 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 12:03:27,418 [screen.py:set_server_config()] - Temperature store size: 1200
+2026-05-20 12:03:27,444 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder', 'extruder1']
+2026-05-20 12:04:21,118 [screen.py:_load_panel()] - Loading panel: gcodes
+2026-05-20 12:04:21,179 [gcodes.py:__init__()] - Thumbsize: 118.3
+2026-05-20 12:04:21,184 [gcodes.py:__init__()] - thumbs
+2026-05-20 12:04:21,202 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 12:04:21,215 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-20 12:04:21,925 [base_panel.py:battery_percentage()] - Battery information not available.
+2026-05-20 12:04:22,137 [gcodes.py:load_files()] - Loaded in 0.209 seconds
+2026-05-20 12:04:22,942 [gcodes.py:change_dir()] - Changing directory to: gcodes/USB
+2026-05-20 12:04:22,943 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 12:04:22,955 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes/USB
+2026-05-20 12:04:22,978 [gcodes.py:load_files()] - Loaded in 0.002 seconds
+2026-05-20 12:04:25,302 [gcodes.py:change_dir()] - Changing directory to: gcodes
+2026-05-20 12:04:25,302 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 12:04:25,304 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 12:04:25,474 [gcodes.py:load_files()] - Loaded in 0.093 seconds
+2026-05-20 12:04:39,371 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-20 12:04:39,426 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 12:04:44,725 [screen.py:_load_panel()] - Loading panel: temperature
+2026-05-20 12:04:44,764 [temperature.py:add_device()] - Adding device: extruder
+2026-05-20 12:04:44,776 [temperature.py:add_device()] - Adding device: extruder1
+2026-05-20 12:04:44,782 [temperature.py:add_device()] - Adding device: heater_bed
+2026-05-20 12:04:44,830 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2026-05-20 12:04:44,833 [temperature.py:select_heater()] - Selecting extruder
+2026-05-20 12:04:44,833 [temperature.py:select_heater()] - Selecting extruder1
+2026-05-20 12:04:44,834 [temperature.py:select_heater()] - Selecting heater_bed
+2026-05-20 12:04:45,561 [screen.py:_menu_go_back()] - #### Menu go back
+2026-05-20 12:04:45,589 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 12:09:46,294 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 12:09:46,310 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 12:09:46,310 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 12:09:46,370 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 16:28:49,514 [screensaver.py:close()] - Closing Screensaver
+2026-05-20 16:28:49,514 [screen.py:wake_screen()] - Screen wake up
+2026-05-20 16:28:49,546 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 16:28:49,546 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 16:28:49,760 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 16:28:50,297 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-20 16:28:52,769 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2026-05-20 16:28:53,870 [gcodes.py:change_dir()] - Changing directory to: gcodes/USB
+2026-05-20 16:28:53,871 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 16:28:53,887 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes/USB
+2026-05-20 16:28:53,912 [gcodes.py:load_files()] - Loaded in 0.002 seconds
+2026-05-20 16:28:56,654 [gcodes.py:change_dir()] - Changing directory to: gcodes
+2026-05-20 16:28:56,655 [gcodes.py:_refresh_files()] - Refreshing
+2026-05-20 16:28:56,658 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2026-05-20 16:28:56,851 [gcodes.py:load_files()] - Loaded in 0.097 seconds
+2026-05-20 16:28:57,541 [screen.py:_menu_go_back()] - #### Menu go home
+2026-05-20 16:28:57,571 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2026-05-20 16:33:57,294 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 16:33:57,309 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 16:33:57,309 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 16:33:57,353 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 16:35:41,498 [screensaver.py:close()] - Closing Screensaver
+2026-05-20 16:35:41,499 [screen.py:wake_screen()] - Screen wake up
+2026-05-20 16:36:33,681 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 16:36:33,682 [KlippyWebsocket.py:power_device_on()] - Sending machine.device_power.on {device}
+2026-05-20 16:36:33,874 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'on', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
+2026-05-20 16:36:34,293 [screensaver.py:delayed_wake()] - Closed Screensaver
+2026-05-20 16:40:41,376 [screensaver.py:show()] - Showing Screensaver
+2026-05-20 16:40:41,452 [screen.py:search_power_devices()] - Found ['Auto Lights']
+2026-05-20 16:40:41,452 [KlippyWebsocket.py:power_device_off()] - Sending machine.device_power.off: Auto Lights
+2026-05-20 16:40:41,479 [screen.py:_websocket_callback()] - Power status changed: {'device': 'Auto Lights', 'status': 'off', 'locked_while_printing': True, 'type': 'klipper_device', 'is_shutdown': False}
