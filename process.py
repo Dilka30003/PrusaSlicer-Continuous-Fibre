@@ -4,7 +4,7 @@ idle_retract_dist = 30           # Distance to retract for idle
 retract_speed= 25*60        # Speed to retract for idle (converted from mm/s to mm/min)
 hop_height = 5              # Height to hop for tool change
 fibre_length = 50           # Length of fibre between nozzle and cutting point
-min_fibre_length = 300       # Minimum length of fibre to extrude
+min_fibre_length = 100       # Minimum length of fibre to extrude
 extrude_cancel_length = 1   # Length before end of fibre extrusion to cancel extrusion to prevent oozing
 layer_skip = 2              # Number of layers between each fibre extrusion (set to 1 to extrude every layer)
 
@@ -122,10 +122,15 @@ u_dist = 0
 extrude_fibre = 0
 fibre_line_num = 0
 perimeter_count = 0
+skip = False
 
 # Fibre processing
 for lineNum in range(len(data)):
     line = data[lineNum]
+    if skip:
+        if line.startswith(";TYPE:Perimeter"):
+            skip = False
+        continue
 
     # Find the current Z height
     if line.startswith(";Z:"):
@@ -258,13 +263,15 @@ for lineNum in range(len(data)):
             prev_y = y
         
         # Start a fibre extrude again if nozzle gets re-primed
-        if not extrude_fibre and line.startswith(f"G1 E{int(retract_dist[0])}"):
+        if not extrude_fibre and (line.startswith(f"G1 E{int(retract_dist[0])}") or line.startswith(";TYPE:Perimeter")):
             extrude_fibre = 1
             prev_x = None
             prev_y = None
             u_dist = 0
 
             data.insert(lineNum+1, "PRIME_FIBRE\n")
+            if line.startswith(";TYPE:Perimeter"):
+                skip = True
 
 
 with open(gcode_path, "w", encoding="utf-8", errors="ignore") as f:
