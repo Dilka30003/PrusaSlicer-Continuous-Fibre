@@ -121,6 +121,7 @@ prev_y = None
 u_dist = 0
 extrude_fibre = 0
 fibre_line_num = 0
+perimeter_count = 0
 
 # Fibre processing
 for lineNum in range(len(data)):
@@ -133,15 +134,17 @@ for lineNum in range(len(data)):
     # Find the layer number
     if line.startswith(";LAYER_NUM:"):
         layer_num = int(line.split(":")[1].replace("\n", ""))
+        perimeter_count = 0
 
     # Check if this is an internal perimeter
-    if line.startswith(";TYPE:Perimeter"):
+    if line.startswith(";TYPE:Perimeter") and perimeter_count == 0:
         # Check if this layer should have fibre, otherwise set flag to cancel perimeter extrusion for this layer
         if layer_num % layer_skip != 0:
             cancelPerim = 1
             continue
         fibrePerim = 1
         extrude_fibre = 1
+        perimeter_count += 1
 
         # Change tool
         gcode = f"M104 T1 S{ccfTemp}\n"
@@ -188,24 +191,24 @@ for lineNum in range(len(data)):
             data.insert(lineNum+1, gcode)
         
         # Fibre perimeter extrusion is done, start looking backwards to find cut position
-        if extrude_fibre and line.startswith("G1 E-") and not line.startswith(f"G1 E-{idle_retract_dist}"):
+        if extrude_fibre and ((line.startswith("G1 E-") and not line.startswith(f"G1 E-{idle_retract_dist}")) or line.startswith(";TYPE:Perimeter")):
             extrude_fibre = 0
             cut_dist = u_dist - fibre_length
             i = lineNum-1
             cur_dist = u_dist
 
-            # # Check if fibre length is greater than minimum length
-            # if u_dist < min_fibre_length:
-            #     # Remove fibre extrusion commands
-            #     line = data[i]
-            #     exit = False
-            #     while exit == False:
-            #         data[i] = line.split(" U")[0] + "\n"
-            #         i -= 1
-            #         line = data[i]
-            #         if line.startswith("G1") and " E" in line and not (" U" in line):
-            #             exit = True
-            #     continue
+            # Check if fibre length is greater than minimum length
+            if u_dist < min_fibre_length:
+                # Remove fibre extrusion commands
+                line = data[i]
+                exit = False
+                while exit == False:
+                    data[i] = line.split(" U")[0] + "\n"
+                    i -= 1
+                    line = data[i]
+                    if line.startswith("G1") and " E" in line and not (" U" in line):
+                        exit = True
+                continue
 
             # Iterate backwards from current point until fibre cut length is reached, removing fibre extrusion from the G1 commands as we go
             while cur_dist > cut_dist:
