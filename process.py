@@ -1,13 +1,54 @@
-retract_dist = 8    # Find from T0 retract dist
+import sys
+idle_retract_dist = [30,30]
+fibre_length = 50           # Length of fibre between nozzle and cutting point
+min_fibre_length = 120       # Minimum length of fibre to extrude
+
+T0_gcode =  """
+T0\n
+"""
+
+T1_gcode =  """
+T1\n
+"""
 
 
 
 # gcode_path = sys.argv[-1]
 gcode_path = "C:\\Users\\dhilu\\Documents\\Anisoprint\\test.gcode"
 
-with open(gcode_path, "r", encoding="utf-8", errors="ignore") as f:
+with open("C:\\Users\\dhilu\\Documents\\Anisoprint\\template.gcode", "r", encoding="utf-8", errors="ignore") as f:
     data = f.readlines()
 
+# Find Settings
+ccfTemp = None
+z_rapid = None
+travel_speed = None
+idleTemp = [None, None]
+retract_dist = [None, None]
+restart_dist = [None, None]
+
+for line in reversed(data):
+    match line:
+        case line if line.startswith("; temperature ="):                # Find CCF extruder temp
+            ccfTemp = line.split(",")[1].replace("\n", "")
+        case line if line.startswith("; machine_max_feedrate_z ="):     # Find Z rapid speed
+            z_rapid = float(line.split("=")[1].replace("\n", "").strip())*60
+        case line if line.startswith("; travel_speed ="):               # Find travel speed
+            travel_speed = float(line.split("=")[1].replace("\n", "").strip())*60
+        case line if line.startswith("; idle_temperature ="):           # Find idle temps
+            idleTemp[0] = line.split(",")[0].split(" ")[-1]
+            idleTemp[1] = line.split(",")[1].replace("\n", "")
+        case line if line.startswith("; retract_length ="):              # Find retract distances
+            retract_dist[0] = int(line.split(",")[0].split(" ")[-1])
+            retract_dist[1] = int(line.split(",")[1].replace("\n", ""))
+        case line if line.startswith("; retract_restart_extra ="):        # Find restart distances
+            restart_dist[0] = int(line.split(",")[0].split(" ")[-1])
+            restart_dist[1] = int(line.split(",")[1].replace("\n", ""))
+    
+    if line.startswith("; prusaslicer_config = begin"):    # End of settings, stop searching
+        break
+
+# Move Perimeters
 i = 0
 layer_num = 0
 perimeter_count = 0
@@ -43,7 +84,7 @@ while i < len(data)-5:
         if move_perimeter:
             # End perimeter move state
             # CASE 1: Hop before next printer move
-            if line.startswith(f"G1 E-{retract_dist}") and not data[i+5].startswith(";TYPE:External perimeter"):    # Check that this isn't the start of an external perimeter
+            if line.startswith(f"G1 E-{retract_dist[0]}") and not data[i+5].startswith(";TYPE:External perimeter"):    # Check that this isn't the start of an external perimeter
                 move_perimeter = False
                 # data.insert(i, ";thingy end here\n")
                 # i += 1                                          # Increment by one to account for data insert
@@ -61,6 +102,102 @@ while i < len(data)-5:
             perimeter_end += 1
     i += 1
 
+i = 0
+current_tool = 0
+
+while i < len(data):
+    line = data[i]
+
+    # Logic if printing with T0
+    if current_tool == 0:
+        # Change to T1 on first perimeter seen
+        if line.startswith(";TYPE:Perimeter"):
+            data.insert(i, T1_gcode)
+            current_tool = 1
+            i += 1                                              # Increment by one to account for data insert
+    
+    # Logic if printing with T1
+    if current_tool == 1:
+        # Change back to T0 after finishing perimeters
+        if line.startswith(";TYPE:") and not line.startswith(";TYPE:Perimeter"):
+            data.insert(i, T0_gcode)
+            current_tool = 0
+            i += 1                                              # Increment by one to account for data insert
+        
+        # if we find a new perimeter section
+        if line.startswith(";TYPE:Perimeter"):
+            # Measure the length of this perimeter section
+            j = i+1
+            perimeter_length = 0
+            prev_x = None
+            prev_y = None
+            while not (data[j].startswith(";TYPE:") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until a new print section is found
+                if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]) and "E" in data[j]: # Check that this is a movement command
+                    # Grab the X and Y coordinates of this movement command
+                    x = float(data[j].split(" X")[1].split(" ")[0])
+                    y = float(data[j].split(" Y")[1].split(" ")[0])
+
+                    # Check if there is a previous coordinate
+                    if prev_x is None:
+                        prev_x = x
+                        prev_y = y
+                        j += 1
+                        continue
+
+                    distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
+                    perimeter_length += distance
+
+                    prev_x = x
+                    prev_y = y
+                j += 1
+            # If perimeter length is above threshold, we can extrude fibre, otherwise skip
+            if perimeter_length < min_fibre_length:
+                i += 1
+                continue
+
+            # Calculate distance at which to cut fibre
+            cut_dist = perimeter_length - fibre_length
+
+            # Start adding fibre commands to gcode
+
+            # Add a fibre prime command
+            data.insert(i, "PRIME_FIBRE\n")
+            i += 1                                              # Increment by one to account for data insert
+
+            j = i+1
+            current_dist = 0
+            prev_x = None
+            prev_y = None
+            while not (data[j].startswith(";TYPE:") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until a new print section is found
+                if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]) and "E" in data[j]: # Check that this is a movement command
+                    # Grab the X and Y coordinates of this movement command
+                    x = float(data[j].split(" X")[1].split(" ")[0])
+                    y = float(data[j].split(" Y")[1].split(" ")[0])
+
+                    # Check if there is a previous coordinate
+                    if prev_x is None:
+                        prev_x = x
+                        prev_y = y
+                        j += 1
+                        continue
+
+                    distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
+                    current_dist += distance
+
+                    if current_dist >= cut_dist:    # Adding this move would extrude too much fibre, cut before
+                        data.insert(j, "CUT\n")
+                        break
+
+                    # Add U move to extrude fibre
+                    data[j] = data[j].replace("\n", f" U{round(current_dist, 5)}\n")
+
+                    prev_x = x
+                    prev_y = y
+                j += 1
+            
+
+    
+    i += 1
 
 
 
