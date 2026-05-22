@@ -185,7 +185,21 @@ while i < len(data):
                     current_dist += distance
 
                     if current_dist >= cut_dist:    # Adding this move would extrude too much fibre, cut before
+                        # Add interpolated move to get a more accurate cut point
+                        e = float(data[j].split(" E")[1].split("\n")[0])
+
+                        ratio = (cut_dist - (current_dist - distance)) / distance
+                        cut_x = round(prev_x + ratio * (x - prev_x), 3)
+                        cut_y = round(prev_y + ratio * (y - prev_y), 3)
+                        cut_e = round(e * ratio, 5)
+                        rest_e = round(e - cut_e, 5)
+                        cut_u = round(cut_dist, 5)
+                        
                         data.insert(j, "CUT\n")
+                        data.insert(j, f"G1 X{cut_x} Y{cut_y} E{cut_e} U{cut_u}\n")
+
+                        # Adjust final move to correct for E value
+                        data[j+2] = data[j+2].replace(f" E{e}", f" E{rest_e}")
                         break
 
                     # Add U move to extrude fibre
