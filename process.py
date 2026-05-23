@@ -2,6 +2,7 @@ import sys
 idle_retract_dist = [30,30]
 fibre_length = 50           # Length of fibre between nozzle and cutting point
 min_fibre_length = 120       # Minimum length of fibre to extrude
+layer_skip = 2
 
 T0_gcode =  """
 T0\n
@@ -102,19 +103,36 @@ while i < len(data)-5:
             perimeter_end += 1
     i += 1
 
+
 i = 0
 current_tool = 0
-
+layer_num = 0
+skip_layer = False
 while i < len(data):
     line = data[i]
 
+    # Find the layer number
+    if line.startswith(";LAYER_NUM:"):
+        layer_num = int(line.split(":")[1].replace("\n", ""))
+        skip_layer = False
+
     # Logic if printing with T0
     if current_tool == 0:
+        # Check if this layer should be skipper
+        if layer_num % layer_skip != 0:  # Skip odd layers
+            skip_layer = True
+
         # Change to T1 on first perimeter seen
         if line.startswith(";TYPE:Perimeter"):
-            data.insert(i, T1_gcode)
-            current_tool = 1
-            i += 1                                              # Increment by one to account for data insert
+            if not skip_layer:    # Only change tool if we're not skipping this layer
+                data.insert(i, T1_gcode)
+                current_tool = 1
+                i += 1                                              # Increment by one to account for data insert
+            else:   # If we're skipping this layer, remove the perimeter moves for this layer
+                j = i
+                while not data[j].startswith(";LAYER_NUM:"):    # Iterate until we find the next layer
+                    data.pop(j)                                  # Remove this line (don't increment j since we just removed this line)
+                
     
     # Logic if printing with T1
     if current_tool == 1:
