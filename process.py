@@ -15,9 +15,9 @@ T1\n
 
 
 # gcode_path = sys.argv[-1]
-gcode_path = "C:\\Users\\dhilu\\Documents\\Anisoprint\\test.gcode"
+gcode_path = "C:\\Users\\Dhiluka\\Documents\\PrusaSlicer-Continuous-Fibre\\test.gcode"
 
-with open("C:\\Users\\dhilu\\Documents\\Anisoprint\\template.gcode", "r", encoding="utf-8", errors="ignore") as f:
+with open("C:\\Users\\Dhiluka\\Documents\\PrusaSlicer-Continuous-Fibre\\template.gcode", "r", encoding="utf-8", errors="ignore") as f:
     data = f.readlines()
 
 # Find Settings
@@ -118,7 +118,7 @@ while i < len(data):
 
     # Logic if printing with T0
     if current_tool == 0:
-        # Check if this layer should be skipper
+        # Check if this layer should be skipped
         if layer_num % layer_skip != 0:  # Skip odd layers
             skip_layer = True
 
@@ -130,8 +130,9 @@ while i < len(data):
                 i += 1                                              # Increment by one to account for data insert
             else:   # If we're skipping this layer, remove the perimeter moves for this layer
                 j = i
-                while not data[j].startswith(";LAYER_NUM:"):    # Iterate until we find the next layer
+                while not (data[j].startswith("M106") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until we find the next layer
                     data.pop(j)                                  # Remove this line (don't increment j since we just removed this line)
+                continue
                 
     
     # Logic if printing with T1
@@ -186,45 +187,56 @@ while i < len(data):
             current_dist = 0
             prev_x = None
             prev_y = None
+            extrude_fibre = True
             while not (data[j].startswith(";TYPE:") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until a new print section is found
+                dsa = data[j]
                 if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]) and "E" in data[j]: # Check that this is a movement command
-                    # Grab the X and Y coordinates of this movement command
-                    x = float(data[j].split(" X")[1].split(" ")[0])
-                    y = float(data[j].split(" Y")[1].split(" ")[0])
+                    # increase extrusion amount to account for skipped layers
+                    e = float(data[j].split(" E")[1].replace("\n", ""))
+                    e *= layer_skip
+                    data[j] = data[j].split(" E")[0] + f" E{e}\n"
 
-                    # Check if there is a previous coordinate
-                    if prev_x is None:
+                    if extrude_fibre:
+                        # Grab the X and Y coordinates of this movement command
+                        x = float(data[j].split(" X")[1].split(" ")[0])
+                        y = float(data[j].split(" Y")[1].split(" ")[0])
+
+                        # Check if there is a previous coordinate
+                        if prev_x is None:
+                            prev_x = x
+                            prev_y = y
+                            j += 1
+                            continue
+
+                        distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
+                        current_dist += distance
+
+                        if current_dist >= cut_dist:    # Adding this move would extrude too much fibre, cut before
+                            # Add interpolated move to get a more accurate cut point
+                            e = float(data[j].split(" E")[1].split("\n")[0])
+
+                            ratio = (cut_dist - (current_dist - distance)) / distance
+                            cut_x = round(prev_x + ratio * (x - prev_x), 3)
+                            cut_y = round(prev_y + ratio * (y - prev_y), 3)
+                            cut_e = round(e * ratio, 5)
+                            rest_e = round(e - cut_e, 5)
+                            cut_u = round(cut_dist, 5)
+                            
+                            data.insert(j, "CUT\n")
+                            data.insert(j, f"G1 X{cut_x} Y{cut_y} E{cut_e} U{cut_u}\n")
+
+                            # Adjust final move to correct for E value
+                            data[j+2] = data[j+2].replace(f" E{e}", f" E{rest_e}")
+                            # break
+                            extrude_fibre = False
+                            j += 3
+                            continue
+
+                        # Add U move to extrude fibre
+                        data[j] = data[j].replace("\n", f" U{round(current_dist, 5)}\n")
+
                         prev_x = x
                         prev_y = y
-                        j += 1
-                        continue
-
-                    distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
-                    current_dist += distance
-
-                    if current_dist >= cut_dist:    # Adding this move would extrude too much fibre, cut before
-                        # Add interpolated move to get a more accurate cut point
-                        e = float(data[j].split(" E")[1].split("\n")[0])
-
-                        ratio = (cut_dist - (current_dist - distance)) / distance
-                        cut_x = round(prev_x + ratio * (x - prev_x), 3)
-                        cut_y = round(prev_y + ratio * (y - prev_y), 3)
-                        cut_e = round(e * ratio, 5)
-                        rest_e = round(e - cut_e, 5)
-                        cut_u = round(cut_dist, 5)
-                        
-                        data.insert(j, "CUT\n")
-                        data.insert(j, f"G1 X{cut_x} Y{cut_y} E{cut_e} U{cut_u}\n")
-
-                        # Adjust final move to correct for E value
-                        data[j+2] = data[j+2].replace(f" E{e}", f" E{rest_e}")
-                        break
-
-                    # Add U move to extrude fibre
-                    data[j] = data[j].replace("\n", f" U{round(current_dist, 5)}\n")
-
-                    prev_x = x
-                    prev_y = y
                 j += 1
             
 
