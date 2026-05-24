@@ -1,8 +1,9 @@
 import sys
 idle_retract_dist = [30,30]
 fibre_length = 50           # Length of fibre between nozzle and cutting point
-min_fibre_length = 120       # Minimum length of fibre to extrude
-layer_skip = 2
+min_fibre_length = 120      # Minimum length of fibre to extrude
+layer_skip = 2              # Number of layers to skip between fibre layers (e.g. 2 means print fibre every 2 layers)
+heatup_time = 30            # Time to heat up T1 before printing (in seconds)
 
 T0_gcode =  """
 T0\n
@@ -21,24 +22,25 @@ with open("C:\\Users\\Dhiluka\\Documents\\PrusaSlicer-Continuous-Fibre\\template
     data = f.readlines()
 
 # Find Settings
-ccfTemp = None
 z_rapid = None
 travel_speed = None
-idleTemp = [None, None]
+printing_temp = [None, None]
+idle_temp = [None, None]
 retract_dist = [None, None]
 restart_dist = [None, None]
 
 for line in reversed(data):
     match line:
         case line if line.startswith("; temperature ="):                # Find CCF extruder temp
-            ccfTemp = line.split(",")[1].replace("\n", "")
+            printing_temp[0] = line.split(",")[0].split(" ")[-1]
+            printing_temp[1] = line.split(",")[1].replace("\n", "")
         case line if line.startswith("; machine_max_feedrate_z ="):     # Find Z rapid speed
             z_rapid = float(line.split("=")[1].replace("\n", "").strip())*60
         case line if line.startswith("; travel_speed ="):               # Find travel speed
             travel_speed = float(line.split("=")[1].replace("\n", "").strip())*60
         case line if line.startswith("; idle_temperature ="):           # Find idle temps
-            idleTemp[0] = line.split(",")[0].split(" ")[-1]
-            idleTemp[1] = line.split(",")[1].replace("\n", "")
+            idle_temp[0] = line.split(",")[0].split(" ")[-1]
+            idle_temp[1] = line.split(",")[1].replace("\n", "")
         case line if line.startswith("; retract_length ="):              # Find retract distances
             retract_dist[0] = int(line.split(",")[0].split(" ")[-1])
             retract_dist[1] = int(line.split(",")[1].replace("\n", ""))
@@ -104,6 +106,8 @@ while i < len(data)-5:
     i += 1
 
 
+
+
 i = 0
 current_tool = 0
 layer_num = 0
@@ -114,14 +118,81 @@ while i < len(data):
     # Find the layer number
     if line.startswith(";LAYER_NUM:"):
         layer_num = int(line.split(":")[1].replace("\n", ""))
-        skip_layer = False
 
-    # Logic if printing with T0
-    if current_tool == 0:
         # Check if this layer should be skipped
         if layer_num % layer_skip != 0:  # Skip odd layers
             skip_layer = True
+        else:
+            skip_layer = False
 
+            # Calculate time until the first perimeter move
+
+            # Iterate backwards to find the current printhead location
+            prev_x = None
+            prev_y = None
+            j = i-1
+            while j > 0:
+                if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]):
+                    prev_x = float(data[j].split(" X")[1].split(" ")[0])
+                    prev_y = float(data[j].split(" Y")[1].split(" ")[0])
+                    break
+                j -= 1
+
+            j = i+1
+            T0_time = 0
+            speed = 0
+            while not (data[j].startswith(";TYPE:Perimeter") or data[j].startswith("END_PRINT")):    # Iterate until we find the first perimeter move
+                # Update feedrate
+                if data[j].startswith("G1") and "F" in data[j]:
+                    speed = float(data[j].split(" F")[1].replace("\n", ""))
+                
+                # Find move commands
+                if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]):
+                    # Calculate distance of this move
+                    x = float(data[j].split(" X")[1].split(" ")[0])
+                    y = float(data[j].split(" Y")[1].split(" ")[0])
+                    
+                    distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
+
+                    T0_time += distance/speed*60    # Calculate time for this move and add to total time
+
+                    prev_x = x
+                    prev_y = y
+                
+                j += 1
+            
+            if not data[j].startswith("END_PRINT"): # If we're on the top layer, there's no need to heat up T1
+                preheat_time = T0_time - heatup_time
+                time = 0
+
+                j = i+1
+                while not data[j].startswith(";TYPE:Perimeter"):
+                    # Update feedrate
+                    if data[j].startswith("G1") and "F" in data[j]:
+                        speed = float(data[j].split(" F")[1].replace("\n", ""))
+                    
+                    # Find move commands
+                    if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]):
+                        # Calculate distance of this move
+                        x = float(data[j].split(" X")[1].split(" ")[0])
+                        y = float(data[j].split(" Y")[1].split(" ")[0])
+                        
+                        distance = ((x-prev_x)**2 + (y-prev_y)**2)**0.5
+
+                        time += distance/speed*60    # Calculate time for this move and add to total time
+
+                        if time >= preheat_time:    # We've reached the point where we need to start heating T1
+                            data.insert(j, f"M104 T1 S{printing_temp[1]}\n")
+                            break
+
+                        prev_x = x
+                        prev_y = y
+                    
+                    j += 1
+
+
+    # Logic if printing with T0
+    if current_tool == 0:
         # Change to T1 on first perimeter seen
         if line.startswith(";TYPE:Perimeter"):
             if not skip_layer:    # Only change tool if we're not skipping this layer
@@ -133,8 +204,7 @@ while i < len(data):
                 while not (data[j].startswith("M106") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until we find the next layer
                     data.pop(j)                                  # Remove this line (don't increment j since we just removed this line)
                 continue
-                
-    
+             
     # Logic if printing with T1
     if current_tool == 1:
         # Change back to T0 after finishing perimeters
