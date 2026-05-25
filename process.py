@@ -1,24 +1,42 @@
 import sys
 idle_retract_dist = [30,30]
+retract_speed= 25*60
 fibre_length = 50           # Length of fibre between nozzle and cutting point
 min_fibre_length = 120      # Minimum length of fibre to extrude
 layer_skip = 2              # Number of layers to skip between fibre layers (e.g. 2 means print fibre every 2 layers)
-heatup_time = 30            # Time to heat up T1 before printing (in seconds)
-
-T0_gcode =  """
-T0\n
-"""
-
-T1_gcode =  """
-T1\n
-"""
+heatup_time = 45            # Time to heat up T1 before printing (in seconds)
+hop_height = 5              # Height to hop when changing tools (in mm)
 
 
+def T0_gcode(z_height, temp, idle_temp, restart_dist, z_rapid, travel_speed):
+    gcode =  f"M104 T1 S{idle_temp}\n"
+    gcode += f"G1 E-{idle_retract_dist[1]} F{retract_speed}\n"
+    gcode += f"G1 Z{z_height+hop_height} F{z_rapid}\n"
+    gcode += f"G1 F{travel_speed}\n"
+    gcode += f"T0\n"
+    gcode += f"G1 Z{z_height} F{z_rapid}\n"
+    gcode += f"G1 E{idle_retract_dist[0] + restart_dist} F{retract_speed}\n"
+    # gcode += f"G1 F{travel_speed}\n"
 
-# gcode_path = sys.argv[-1]
-gcode_path = "C:\\Users\\Dhiluka\\Documents\\PrusaSlicer-Continuous-Fibre\\test.gcode"
+    return gcode
 
-with open("C:\\Users\\Dhiluka\\Documents\\PrusaSlicer-Continuous-Fibre\\template.gcode", "r", encoding="utf-8", errors="ignore") as f:
+def T1_gcode(z_height, temp, restart_dist, z_rapid, travel_speed):
+    gcode = f"G1 E-{idle_retract_dist[0]} F{retract_speed}\n"
+    gcode += f"G1 Z{z_height+hop_height} F{z_rapid}\n"
+    gcode += f"G1 F{travel_speed}\n"
+    gcode += f"T1\n"
+    gcode += f"G1 Z{z_height} F{z_rapid}\n"
+    gcode += f"M109 T1 S{temp}\n"
+    gcode += f"G1 E{idle_retract_dist[1] + restart_dist} F{retract_speed}\n"
+    # gcode += f"G1 F{travel_speed}\n"
+
+    return gcode
+
+
+gcode_path = sys.argv[-1]
+# gcode_path = "C:\\Users\\dhilu\\Documents\\Anisoprint\\test.gcode"
+
+with open(gcode_path, "r", encoding="utf-8", errors="ignore") as f:
     data = f.readlines()
 
 # Find Settings
@@ -111,9 +129,14 @@ while i < len(data)-5:
 i = 0
 current_tool = 0
 layer_num = 0
+z_height = 0
 skip_layer = False
 while i < len(data):
     line = data[i]
+
+    # Find the current Z height
+    if line.startswith(";Z:"):
+        z_height = float(line.split(":")[1].replace("\n", ""))
 
     # Find the layer number
     if line.startswith(";LAYER_NUM:"):
@@ -196,7 +219,7 @@ while i < len(data):
         # Change to T1 on first perimeter seen
         if line.startswith(";TYPE:Perimeter"):
             if not skip_layer:    # Only change tool if we're not skipping this layer
-                data.insert(i, T1_gcode)
+                data.insert(i, T1_gcode(z_height, printing_temp[1], restart_dist[1], z_rapid, travel_speed))
                 current_tool = 1
                 i += 1                                              # Increment by one to account for data insert
             else:   # If we're skipping this layer, remove the perimeter moves for this layer
@@ -209,7 +232,7 @@ while i < len(data):
     if current_tool == 1:
         # Change back to T0 after finishing perimeters
         if line.startswith(";TYPE:") and not line.startswith(";TYPE:Perimeter"):
-            data.insert(i, T0_gcode)
+            data.insert(i, T0_gcode(z_height, printing_temp[0], idle_temp[1], restart_dist[0], z_rapid, travel_speed))
             current_tool = 0
             i += 1                                              # Increment by one to account for data insert
         
