@@ -4,18 +4,20 @@ retract_speed= 25*60
 fibre_length = 50           # Length of fibre between nozzle and cutting point
 min_fibre_length = 120      # Minimum length of fibre to extrude
 layer_skip = 2              # Number of layers to skip between fibre layers (e.g. 2 means print fibre every 2 layers)
-heatup_time = 45            # Time to heat up T1 before printing (in seconds)
+heatup_time = 30            # Time to heat up T1 before printing (in seconds)
 hop_height = 5              # Height to hop when changing tools (in mm)
+temp_wait_delta = 5         # Delta from set temperature to wait for before resuming print (in degrees Celsius)
 
 
 def T0_gcode(z_height, temp, idle_temp, restart_dist, z_rapid, travel_speed):
-    gcode =  f"M104 T1 S{idle_temp}\n"
+    gcode = f"M104 T1 S{idle_temp}\n"
     gcode += f"G1 E-{idle_retract_dist[1]} F{retract_speed}\n"
+    gcode += f"TEMPERATURE_WAIT SENSOR=extruder1 MAXIMUM=160\n"
     gcode += f"G1 Z{z_height+hop_height} F{z_rapid}\n"
     gcode += f"G1 F{travel_speed}\n"
     gcode += f"T0\n"
     gcode += f"G1 Z{z_height} F{z_rapid}\n"
-    gcode += f"G1 E{idle_retract_dist[0] + restart_dist} F{retract_speed}\n"
+    gcode += f"G1 E{idle_retract_dist[0] + 7} F{retract_speed}\n"
     # gcode += f"G1 F{travel_speed}\n"
 
     return gcode
@@ -26,7 +28,8 @@ def T1_gcode(z_height, temp, restart_dist, z_rapid, travel_speed):
     gcode += f"G1 F{travel_speed}\n"
     gcode += f"T1\n"
     gcode += f"G1 Z{z_height} F{z_rapid}\n"
-    gcode += f"M109 T1 S{temp}\n"
+    gcode += f"M104 T1 S{temp}\n"
+    # gcode += f"TEMPERATURE_WAIT SENSOR=extruder1 MINIMUM={temp-temp_wait_delta}\n"
     gcode += f"G1 E{idle_retract_dist[1] + restart_dist} F{retract_speed}\n"
     # gcode += f"G1 F{travel_speed}\n"
 
@@ -50,15 +53,15 @@ restart_dist = [None, None]
 for line in reversed(data):
     match line:
         case line if line.startswith("; temperature ="):                # Find CCF extruder temp
-            printing_temp[0] = line.split(",")[0].split(" ")[-1]
-            printing_temp[1] = line.split(",")[1].replace("\n", "")
+            printing_temp[0] = int(line.split(",")[0].split(" ")[-1])
+            printing_temp[1] = int(line.split(",")[1].replace("\n", ""))
         case line if line.startswith("; machine_max_feedrate_z ="):     # Find Z rapid speed
             z_rapid = float(line.split("=")[1].replace("\n", "").strip())*60
         case line if line.startswith("; travel_speed ="):               # Find travel speed
             travel_speed = float(line.split("=")[1].replace("\n", "").strip())*60
         case line if line.startswith("; idle_temperature ="):           # Find idle temps
-            idle_temp[0] = line.split(",")[0].split(" ")[-1]
-            idle_temp[1] = line.split(",")[1].replace("\n", "")
+            idle_temp[0] = int(line.split(",")[0].split(" ")[-1])
+            idle_temp[1] = int(line.split(",")[1].replace("\n", ""))
         case line if line.startswith("; retract_length ="):              # Find retract distances
             retract_dist[0] = int(line.split(",")[0].split(" ")[-1])
             retract_dist[1] = int(line.split(",")[1].replace("\n", ""))
@@ -274,7 +277,9 @@ while i < len(data):
 
             # Add a fibre prime command
             data.insert(i, "PRIME_FIBRE\n")
-            i += 1                                              # Increment by one to account for data insert
+            data.insert(i+1, f"TEMPERATURE_WAIT SENSOR=extruder1 MINIMUM={printing_temp[1]-temp_wait_delta}\n")
+            data.insert(i+2, f"G1 E{restart_dist[1]}\n")
+            i += 3                                              # Increment by one to account for data insert
 
             j = i+1
             current_dist = 0
@@ -282,7 +287,6 @@ while i < len(data):
             prev_y = None
             extrude_fibre = True
             while not (data[j].startswith(";TYPE:") or data[j].startswith(";LAYER_CHANGE")):    # Iterate until a new print section is found
-                dsa = data[j]
                 if data[j].startswith("G1") and ("X" in data[j] or "Y" in data[j]) and "E" in data[j]: # Check that this is a movement command
                     # increase extrusion amount to account for skipped layers
                     e = float(data[j].split(" E")[1].replace("\n", ""))
